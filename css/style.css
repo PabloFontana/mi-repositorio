@@ -510,8 +510,6 @@ footer.footerProductos{
     
 }
 
-
-
 /* Tamano imagnes de las todas categorias */
 
 img.tamanoAdaptado{
@@ -639,6 +637,10 @@ body{
         left:  0;
     } 
 }
+.RedesSociales form{
+    font-size: 11px;
+}
+
 
 
 @media (max-width:1200px){
@@ -826,6 +828,10 @@ footer{
     left: 555px;
     
 }
+.RedesSociales form{
+    font-size: 15px;
+}
+
 }
 
 
@@ -975,8 +981,10 @@ li.NavegacionIteam{
         position: relative;
         top: 35px;
         left: 110px;
-        
-}
+        }
+        .RedesSociales form{
+            font-size: 15px;
+        }
 }
 @media (max-width:320px){
     .grid1{
@@ -1011,4 +1019,13 @@ li.NavegacionIteam{
         margin-left: 95px;    
     }
 }
+
+
+@media (min-width:1600px){
+    .RedesSociales form{
+        font-size: 15px;
+    }
+}
+
+
 /* FINAL DE PARTE RESPONSIVE. SOLO CON MEDIA QUERIES */
