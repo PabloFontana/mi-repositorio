@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-
 @font-face{
     font-family: "Backhome";
     src: url(../font/Backhome.otf);
@@ -21,16 +20,20 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    overflow-x:hidden;
 }
-/* header{
-padding: 0 1rem; 
+header{
+padding: 1rem; 
 width: 100%;
-height: 200px;
+height: 140px;
 top: 0;
-z-index: 10;
+z-index: 9999;
 display: flex;
 align-items: center;
-} */
+position: sticky;
+background-color: rgba(255, 255, 255, 0.884);
+}
+
 
 /* pseudoelemento */
 
@@ -62,7 +65,7 @@ h1{
 nav.navegacionSuperior{
     
     border-radius: 5px;
-    margin: 10px 10px 10px 300px;
+    margin: 10px 10px 10px 450px;
     display: inline;
     font-size: 27px;
     text-align: center;
@@ -104,9 +107,9 @@ ul li a {
 /* LOOGOCRONOZ estilo para logo principal y logo del footer */
 #logocronoz{
     border-radius: 100px;   
-    width: 200px;
-    margin-top: 15px;
-    margin-left: 35px;
+    width: 130px;
+    margin-top: 1px;
+    margin-left: 45px;
 }
 
 
@@ -176,7 +179,7 @@ img.ImgCategorias{
     margin: 10px 10px 10px 0px; 
     margin-left: 30px;
     text-align: center;
-    opacity: .7;
+    opacity: .9;
 }
 img.ImgCategorias:hover{
     opacity: 1;
@@ -250,7 +253,7 @@ section.Destacados{
 div.ProductoDestacado{
     width: 460px;
     display: inline-block;
-    opacity: .85;
+    opacity: .95;
     height: 500px;
 }
 div.ProductoDestacado:hover{
@@ -377,23 +380,22 @@ p.textfinal1{
 
 
 footer{
-    margin: 0px 0px 60px 0px;
+    margin: 0px 0px 60px 10px;
     /* text-align: center; */
     width: 100%;
-    border: 2px solid black ;
-    padding: 10px;
+    border-top: 2px solid black ;
+    padding: 5px;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: 250px;
     text-align: center;
     background-color: white;
+    font-size: 18px;
 }
 
 
 section.NavegacionFooter{
-
-    text-align: center;
-
+   /*  text-align: center; */
 }
 
 .icon-footer{ 
@@ -401,19 +403,11 @@ section.NavegacionFooter{
 }
 
 ul.sinPunto{
-    list-style-type: none;
-    display: grid;
-    
+    list-style-type: none;    
 }
-
-
 #email:focus{
     background-color: rgba(128, 128, 128, 0.37);
-}
-
-    
-
-
+}   
 
 
 #logocronoz2{
@@ -421,7 +415,7 @@ ul.sinPunto{
     width: 150px;
     position: relative;
     top: 50px;
-    left: 40px;
+    left: 80px;
     
 }
 
@@ -436,23 +430,25 @@ que se encuentran en la seccion destacados. ProdcutosDestacados
 y imgDestacados */
 
 .grid1{
+    max-width: 100%;
+    display: flex;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: 500px ;
-    margin-left: -10px;
-    width: 100%;
+    /* margin-left: 200px; */
+    margin: 0 auto;
 } 
 section.proximamenteVideo{
     width: 270px;
     height: 500px;
     font-size: 18px;
     position: absolute;
-    left: 1350px;
-    top: 2220px;
+    left: 1500px;
+    top: 2150px;
     text-align: center;
     color: rgba(3, 0, 0, 0.904);
     border-radius: 30px;
-    z-index: 999;
+    z-index: 9;
 }
 video.video1{
     width: 200px;
@@ -463,6 +459,7 @@ h1.titulo_categorias {
     text-align: center;
     padding: 10px;
     margin-top: 10px;
+    width: 100%;
 }
 
 #Living{
@@ -470,7 +467,7 @@ h1.titulo_categorias {
     font-size: 80px;
     width: 100%;
     padding: 10px;
-    margin-left: -10px;
+    margin-left: -15px;
     font-weight: 500;
 }
 
@@ -480,7 +477,7 @@ h1.titulo_categorias {
     font-size: 80px;
     width: 100%;
     padding: 10px;
-    margin-left: -10px;
+    margin-left: -15px;
     font-weight: 500;
 }
 
@@ -622,47 +619,54 @@ div.google-maps{
 }
 /* COLOR FONDO TODO EL SITIO WEB */
 body{ 
-    background-color: rgba(0, 0, 0, 0.075);}
+    background-color: rgba(0, 0, 0, 0);}
 
 /* Responsive Grids ll */
 @media (max-width:1440px){
-    section.proximamenteVideo{
+#logocronoz{
+    width: 130px;
+    margin-top: 5px;
+}
+header{
+    height: 140px;
+}
+nav.navegacionSuperior{
+    margin: 10px 10px 10px 200px;
+    font-size: 19px;
+}
+
+section.proximamenteVideo{
         left: 850px;
-        top: 1610px;
-    }
-    .grid1{ 
+        top: 1410px;
+}
+.grid1{         
+        width: 90%;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 500px ;
-        width: 100%;
-        left:  0;
-    } 
+        margin: 0 auto;
+        justify-content: center;
+} 
 }
 .RedesSociales form{
     font-size: 11px;
 }
 
-
-
 @media (max-width:1200px){
-
-    header{
-        display: inline-block;
-        height: 220px;
-        width: 100%;
-        }
-    
-    ul.NavegacionNav {
+header{
+    height: 140px;
+}
+ul.NavegacionNav {
         font-size: 17px;
         display: inline;
-        width: 50%;
-        }
-
-    .grid1{
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 500px ;
+        width: 100%;
+        margin-left: -50px;
+}
+.grid1{
     width: 90%;
-    gap: 15px;
-    } 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 480px ;
+    margin: 0 auto;
+} 
 h1.titulo_categorias {
     font-size: 90px;
     padding: 10px;
@@ -670,18 +674,57 @@ h1.titulo_categorias {
 }
 #Living{
     margin-top: 1px;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+#Otros{
+    font-size: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+#ComedorCocina{
+    width: 90%;
+    margin: 0 auto;
 }
 section.proximamenteVideo{
     left: 750px;
-    top: 1580px;
+    top: 1450px;
 }
-
+div.ProductoDestacado{
+    width:100%;   
+}
+h3{
+    font-size: 20px;
+    margin-top: 5px;
+}
+button{
+    padding: 4px;
+    border-radius: 5px;
+    
+}
+footer{
+    margin: 0px 0px 60px 0px;
+    /* text-align: center; */
+    width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 250px;
+    text-align: center;
+    font-size: 13px;
+}
+#logocronoz2{
+    width: 130px;
+    top: 20px;
+    left: 25px;
+    
+}
 }
 
 @media (max-width:1024px){
     header{
-        display: inline-block;
-        height: 220px;
+        height: 150px;
         width: 100%;
         }
     
@@ -714,22 +757,32 @@ section.proximamenteVideo{
     #Otros{
     font-size: 70px;
 }
+footer{
+    margin: 0px 0px 60px 0px;
+    width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 250px;
+    text-align: center;
+    font-size: 13px;
 }
-
-@media (max-width:1023px){
-
+#logocronoz2{
+    left: 30px;
+    margin-left: -10px;
+}
 }
 
 @media (max-width:768px ){
 /* menu mobile /tablet */
 #logocronoz{
     border-radius: 100px;   
-    width: 150px;
-    margin-top: 15px;
-    margin-left: 35px;
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 45px;
 }
 header{
-    height: 170px;
+    height: 130px;
 }
 ul.NavegacionNav{
     display: none;
@@ -739,7 +792,6 @@ ul.NavegacionNav{
     display: inline-block;
     position: relative;
     left: 210px;
-    
 }
 
 .navegacionSuperior label i{
@@ -776,13 +828,14 @@ li.NavegacionIteam{
 }
 
 .grid1{
-
     grid-template-columns: repeat(2,350px);
     grid-template-rows: 480px;
-    position: relative;
-    left: -50px;
-    width: 100vh;
+    margin-left: -30px;
 } 
+h3{
+    font-size: 22px;
+    margin-top: 5px;
+}
     h1.titulo_categorias {
         font-size: 80px;
         text-align: center;
@@ -790,96 +843,76 @@ li.NavegacionIteam{
         margin-top: 0px;
     }
     section.proximamenteVideo{
-        /* width: 270px; */
-        /* height: 500px; */
-        /* font-size: 18px; */
         left: 450px;
-        top: 1910px;
+        top: 1850px;
     }
     #Living{
         font-size: 50px;
         margin-top: 0px;
+        margin-left: 0px;
 }
     
     #ComedorCocina{
     font-size: 50px;
+    margin-left: 0px;
 }
     #Otros{
     font-size: 50px;
+    margin-left: 0px;
 }
 
 footer{
     margin: 0px 0px 60px 0px;
     /* text-align: center; */
     width: 100%;
-    border: 2px solid black ;
-    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat( 2,350px);
+    grid-template-rows: 1fr;
     text-align: center;
     background-color: white;
 }
 #logocronoz2{
     border-radius: 100px; 
-    width: 150px;
+    width: 130px;
     position: relative;
     top: 20px;
-    left: 555px;
+    left: 315px;
     
 }
 .RedesSociales form{
-    font-size: 15px;
+    font-size: 13px;
 }
 
 }
-
-
 @media (max-width:600px){
-    .grid1{
-        grid-template-columns: 500px;
-        grid-template-rows: 500px ;
-        width: 100%;    
-    } 
-    
-    section.proximamenteVideo{
-        display: none;
-    }
-    
-        #Living{
-            font-size: 50px;
-            margin-top: 0px;
-            margin-left: 100px;
-            width: 50%;            
-            }
-        
-        #ComedorCocina{
-        font-size: 50px;
-        margin-left: -40px;
+.grid1{
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px ;
+    width: auto;
+    margin-left: 30px;
+} 
 
-    }
-        #Otros{
-        font-size: 50px;
-        margin-left: -50px;
-
-    }
-    h1.titulo_categorias {
-        text-align: center;
-        width: 75%;
-        margin-left: 50px;
-    }
+section.proximamenteVideo{
+    display: none;
+}
+h1.titulo_categorias {
+        width: 100%;
+        font-size: 80px;
+        width: 100%;
+        margin-left: 20px;
 }
 
+}
 @media (max-width:480px){
     /* menu mobile /tablet */
 #logocronoz{
     border-radius: 100px;   
-    width: 150px;
-    margin-top: 15px;
+    width: 120px;
+    margin-top: 1px;
     margin-left: 35px;
 }
 header{
-    height: 170px;
+    height: 125px;
 }
 ul.NavegacionNav{
     display: none;
@@ -889,8 +922,8 @@ ul.NavegacionNav{
 .navegacionSuperior label{
     display: inline-block;
     position: relative;
-    left: 30px;
-    top: -150px;
+    left: 40px;
+    top: 0px;
     
 }
 
@@ -914,7 +947,7 @@ ul.NavegacionNav{
     font-size: 30px;
     gap: 15px;
     z-index: 9999;
-    border-radius: 10   px;
+    border-radius: 10px;
 
 }
 li.NavegacionIteam{
@@ -931,9 +964,8 @@ li.NavegacionIteam{
     .grid1{
         grid-template-columns: 1fr;
         grid-template-rows: 500px;
-        width: 100vh;
-        left: -55px;
-        right: 0;
+        width: 100%;
+        margin: 0 auto;
     } 
     section.proximamenteVideo{
         display: none;
@@ -941,33 +973,23 @@ li.NavegacionIteam{
     
         #Living{
             font-size: 40px;
-            margin-top: 0px;
-            margin-left: 75px;
     }
         
         #ComedorCocina{
         font-size: 40px;
-        margin-left: 0px;
-        width: 350px;
-        ;
 
     }
         #Otros{
         font-size: 40px;
-        margin-left: -25px;
 
     }
     h1.titulo_categorias {
-        text-align: center;
-        width: 80%;
-        margin-left: 40px;
-        
+        margin-left: 0px;
     }
     footer{
         margin: 0px 0px 60px 0px;
         /* text-align: center; */
         width: 100%;
-        border: 2px solid black ;
         padding: 10px;
         display: grid;
         grid-template-columns: 1fr;
@@ -980,43 +1002,56 @@ li.NavegacionIteam{
         width: 150px;
         position: relative;
         top: 35px;
-        left: 110px;
+        left: 155px;
         }
         .RedesSociales form{
             font-size: 15px;
         }
 }
 @media (max-width:320px){
+    header{
+        width: 140%;
+    }
     .grid1{
-        grid-template-columns: 380px;
+        width: 100%;
+        grid-template-columns: 1fr;
         grid-template-rows: 500px;
-        width: 50%;
+        margin: 0 auto;
+        margin-left: 70px;
     } 
     section.proximamenteVideo{
         display: none;
     }
     
-        #Living{
-            font-size: 40px;
-            margin-top: 0px;
-            margin-left: 110px;
+    #Living{
+        width: 100%;
+        font-size: 40px;
+        margin: 0 auto;
+        margin-left: 55px;
     }
         
         #ComedorCocina{
         font-size: 40px;
-        margin-left: 0px;
-        width: 350px;
 
     }
         #Otros{
-        font-size: 40px;
-        margin-left: 45px;
-
+        font-size: 40px;  
+        width: 100%;
+        margin-left: 55px;
     }
     h1.titulo_categorias {
-        text-align: center;
         padding: 0px;
-        margin-left: 95px;    
+        margin-left: 75px;    
+    }
+    footer{
+        margin: 0px 0px 50px 0px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 450px;
+        grid-template-rows: 200px;
+        font-size: 14px;
+        /* background-color: rgb(255, 0, 0); */
+        width: 480px;
     }
 }
 
