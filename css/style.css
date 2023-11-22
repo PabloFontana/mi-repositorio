@@ -891,7 +891,6 @@ footer{
     width: auto;
     margin-left: 30px;
 } 
-
 section.proximamenteVideo{
     display: none;
 }
@@ -901,7 +900,16 @@ h1.titulo_categorias {
         width: 100%;
         margin-left: 20px;
 }
-
+footer{
+    width: 107%;
+    display: grid;
+    grid-template-columns: repeat( 2,300px);
+    grid-template-rows: 1fr;
+}
+#logocronoz2{
+    top: 20px;
+    left: 260px;
+}
 }
 @media (max-width:480px){
     /* menu mobile /tablet */
