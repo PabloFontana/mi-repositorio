@@ -1,0 +1,26 @@
+@import './partials/fonts';
+@import'./partials/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    width: $ancho;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+/* Importante las queries queden aisladas al final. Por escadalada de la misma  */
+@import './partials/queries';
