@@ -291,35 +291,33 @@
     }
     @media (max-width:480px){
         /* menu mobile /tablet */
+
     #logocronoz{
-        border-radius: 100px;   
-        width: 120px;
+        width: 80px;
         margin-top: 1px;
-        margin-left: 35px;
+        margin-left: 5px;
+        
     }
     header{
-        height: 125px;
+        height: 105px;
     }
     ul.NavegacionNav{
         display: none;
-        
     }
-    
     .navegacionSuperior label{
         display: inline-block;
         position: relative;
-        left: 40px;
-        top: 0px;
+        left: 300px;
+        top: -180px;
+        
         
     }
     
     .navegacionSuperior label i{
         font-size: 50px;
-        
-    
     }
     .navegacionSuperior #check_menu:checked~ .NavegacionNav {
-        display: block;
+        /* display: block; */
         background-color: rgba(10, 1, 1, 0.76);
         width: 100%;
         height: 100vh;
@@ -334,7 +332,7 @@
         gap: 15px;
         z-index: 9999;
         border-radius: 10px;
-    
+        
     }
     li.NavegacionIteam{
         border: 0px solid black;
@@ -344,7 +342,7 @@
         margin-top: 10px;
         text-align: center;
         border-radius: 5px;
-        border-bottom: px solid black;
+        border-bottom: px solid black;  
         
     }
         .grid1{
@@ -393,6 +391,38 @@
             .RedesSociales form{
                 font-size: 15px;
             }
+            /* pagina de contacto */
+        .contacto-info{
+            display: grid;
+            grid-template-columns: 1300px;
+            grid-template-rows: 400px;
+            margin: 0 auto;
+        }
+        div.contacto-section{
+            margin: 0 auto;
+            width: 100%;
+            text-align: start;
+        }
+        div.contacto-section img.img-contacto{
+            width: 13px; 
+        }
+        div.google-maps{
+            width: 150px;
+            margin: 0 auto;
+        }
+        h2.google-text{
+                font-size: 30px;
+                width: 100%;
+                margin: 0 auto;
+            }
+            div.google-maps iframe{ width: 350px;}
+
+/* Pagina proyectos a medida */
+ol.pasos-seguir{
+    width: 400px;
+    height: 800px;
+    ;
+}
     }
     @media (max-width:320px){
         header{

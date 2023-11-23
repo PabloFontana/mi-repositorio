@@ -42,7 +42,7 @@ header{
 
     #logocronoz{
         border-radius: 100px;   
-        width: 130px;
+        width: 120px;
         margin-top: -10px;
         margin-left: 45px;
     }
@@ -520,7 +520,7 @@ ol.pasos-seguir{
     height: 500px;
     padding: 30px; 
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 10px;
     width: $ancho/2;
