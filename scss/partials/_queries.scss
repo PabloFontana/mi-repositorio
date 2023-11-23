@@ -1,0 +1,452 @@
+/* Responsive Grids l */
+@media (max-width:1440px){
+    #logocronoz{
+        width: 130px;
+        margin-top: 5px;
+    }
+    header{
+        height: 140px;
+    
+    }
+
+    nav.navegacionSuperior{
+        margin: 10px 10px 10px 10px;
+        font-size: 14px;
+        background-color: red;
+        
+    }
+    
+    section.proximamenteVideo{
+            left: 850px;
+            top: 1510px;
+    }
+    .grid1{         
+            width: 90%;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 500px ;
+            margin: 0 auto;
+            justify-content: center;
+    } 
+    }
+    
+    @media (max-width:1200px){
+    header{
+        height: 140px;
+    }
+    ul.NavegacionNav {
+            font-size: 17px;
+            display: inline;
+            width: 100%;
+            margin-left: -50px;
+    }
+    .grid1{
+        width: 90%;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 480px ;
+        margin: 0 auto;
+    } 
+    h1.titulo_categorias {
+        font-size: 90px;
+        padding: 10px;
+        margin-top: 1px;
+    }
+    #Living{
+        margin-top: 1px;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+    #Otros{
+        font-size: 50px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #ComedorCocina{
+        width: 90%;
+        margin: 0 auto;
+    }
+    section.proximamenteVideo{
+        left: 750px;
+        top: 1450px;
+    }
+    div.ProductoDestacado{
+        width:100%;   
+    }
+    h3{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    button{
+        padding: 4px;
+        border-radius: 5px;
+        
+    }
+    footer{
+        margin: 0px 0px 60px 0px;
+        /* text-align: center; */
+        width: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 250px;
+        text-align: center;
+        font-size: 13px;
+    }
+    #logocronoz2{
+        width: 130px;
+        top: 20px;
+        left: 25px;
+        
+    }
+    }
+    
+    @media (max-width:1024px){
+        header{
+            height: 150px;
+            width: 100%;
+            }
+        
+        ul.NavegacionNav {
+            display: inline;
+            position: relative;
+            margin-left: -120px;
+            font-size: 15px;
+            
+    
+            }
+        .grid1{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 500px ;
+            width: 100%;
+            gap: 5px;
+        } 
+        section.proximamenteVideo{
+            left: 630px;
+            top: 1940px;
+        }
+        #Living{
+            font-size: 70px;
+            margin-top: 1px;
+    }
+        
+        #ComedorCocina{
+        font-size: 70px;
+    }
+        #Otros{
+        font-size: 70px;
+    }
+    footer{
+        margin: 0px 0px 60px 0px;
+        width: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 250px;
+        text-align: center;
+        font-size: 13px;
+    }
+    #logocronoz2{
+        left: 30px;
+        margin-left: -10px;
+    }
+    }
+    
+    @media (max-width:768px ){
+    /* menu mobile /tablet */
+    #logocronoz{
+        border-radius: 100px;   
+        width: 110px;
+        margin-top: 3px;
+        margin-left: 45px;
+    }
+    header{
+        height: 130px;
+    }
+    ul.NavegacionNav{
+        display: none;
+    }
+    
+    .navegacionSuperior label{
+        display: inline-block;
+        position: relative;
+        left: 210px;
+    }
+    
+    .navegacionSuperior label i{
+        font-size: 50px;
+    
+    }
+    .navegacionSuperior #check_menu:checked~ .NavegacionNav {
+        display: inline;
+        background-color: rgba(10, 1, 1, 0.76);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 101px;
+        top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        font-size: 30px;
+        gap: 15px;
+        border-radius: 5px;
+        z-index: 9999;
+    }
+    li.NavegacionIteam{
+        border: 0px solid black;
+        padding: 5px;
+        background-color: rgba(238, 237, 237, 0.705);
+        margin-left: 15px;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 5px;
+        border-bottom: px solid black;
+        
+    }
+    
+    .grid1{
+        grid-template-columns: repeat(2,350px);
+        grid-template-rows: 480px;
+        margin-left: -30px;
+    } 
+    h3{
+        font-size: 22px;
+        margin-top: 5px;
+    }
+        h1.titulo_categorias {
+            font-size: 80px;
+            text-align: center;
+            padding: 10px;
+            margin-top: 0px;
+        }
+        section.proximamenteVideo{
+            left: 450px;
+            top: 1850px;
+        }
+        #Living{
+            font-size: 50px;
+            margin-top: 0px;
+            margin-left: 0px;
+    }
+        
+        #ComedorCocina{
+        font-size: 50px;
+        margin-left: 0px;
+    }
+        #Otros{
+        font-size: 50px;
+        margin-left: 0px;
+    }
+    
+    footer{
+        margin: 0px 0px 60px 0px;
+        /* text-align: center; */
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat( 2,350px);
+        grid-template-rows: 1fr;
+        text-align: center;
+        background-color: white;
+    }
+    #logocronoz2{
+        border-radius: 100px; 
+        width: 130px;
+        position: relative;
+        top: 20px;
+        left: 315px;
+        
+    }
+    .RedesSociales form{
+        font-size: 13px;
+    }
+    
+    }
+    @media (max-width:600px){
+    .grid1{
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px ;
+        width: auto;
+        margin-left: 30px;
+    } 
+    section.proximamenteVideo{
+        display: none;
+    }
+    h1.titulo_categorias {
+            width: 100%;
+            font-size: 80px;
+            width: 100%;
+            margin-left: 20px;
+    }
+    footer{
+        width: 107%;
+        display: grid;
+        grid-template-columns: repeat( 2,300px);
+        grid-template-rows: 1fr;
+    }
+    #logocronoz2{
+        top: 20px;
+        left: 260px;
+    }
+    }
+    @media (max-width:480px){
+        /* menu mobile /tablet */
+    #logocronoz{
+        border-radius: 100px;   
+        width: 120px;
+        margin-top: 1px;
+        margin-left: 35px;
+    }
+    header{
+        height: 125px;
+    }
+    ul.NavegacionNav{
+        display: none;
+        
+    }
+    
+    .navegacionSuperior label{
+        display: inline-block;
+        position: relative;
+        left: 40px;
+        top: 0px;
+        
+    }
+    
+    .navegacionSuperior label i{
+        font-size: 50px;
+        
+    
+    }
+    .navegacionSuperior #check_menu:checked~ .NavegacionNav {
+        display: block;
+        background-color: rgba(10, 1, 1, 0.76);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 110px;
+        top: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        font-size: 30px;
+        gap: 15px;
+        z-index: 9999;
+        border-radius: 10px;
+    
+    }
+    li.NavegacionIteam{
+        border: 0px solid black;
+        padding: 5px;
+        background-color: rgba(238, 237, 237, 0.705);
+        margin-left: 15px;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 5px;
+        border-bottom: px solid black;
+        
+    }
+        .grid1{
+            grid-template-columns: 1fr;
+            grid-template-rows: 500px;
+            width: 100%;
+            margin: 0 auto;
+        } 
+        section.proximamenteVideo{
+            display: none;
+        }
+        
+            #Living{
+                font-size: 40px;
+        }
+            
+            #ComedorCocina{
+            font-size: 40px;
+    
+        }
+            #Otros{
+            font-size: 40px;
+    
+        }
+        h1.titulo_categorias {
+            margin-left: 0px;
+        }
+        footer{
+            margin: 0px 0px 60px 0px;
+            /* text-align: center; */
+            width: 100%;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5,1fr);
+            text-align: center;
+            background-color: white;
+        }
+        #logocronoz2{
+            border-radius: 100px; 
+            width: 150px;
+            position: relative;
+            top: 35px;
+            left: 155px;
+            }
+            .RedesSociales form{
+                font-size: 15px;
+            }
+    }
+    @media (max-width:320px){
+        header{
+            width: 140%;
+        }
+        .grid1{
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 500px;
+            margin: 0 auto;
+            margin-left: 70px;
+        } 
+        section.proximamenteVideo{
+            display: none;
+        }
+        
+        #Living{
+            width: 100%;
+            font-size: 40px;
+            margin: 0 auto;
+            margin-left: 55px;
+        }
+            
+            #ComedorCocina{
+            font-size: 40px;
+    
+        }
+            #Otros{
+            font-size: 40px;  
+            width: 100%;
+            margin-left: 55px;
+        }
+        h1.titulo_categorias {
+            padding: 0px;
+            margin-left: 75px;    
+        }
+        footer{
+            margin: 0px 0px 50px 0px;
+            gap: 10px;
+            display: grid;
+            grid-template-columns: 450px;
+            grid-template-rows: 200px;
+            font-size: 14px;
+            /* background-color: rgb(255, 0, 0); */
+            width: 480px;
+        }
+    }
+    
+    
+    @media (min-width:1600px){
+        .RedesSociales form{
+            font-size: 15px;
+        }
+    }
+    
+    
+    /* FINAL DE PARTE RESPONSIVE. SOLO CON MEDIA QUERIES */

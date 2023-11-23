@@ -11,11 +11,528 @@ body{
     position: relative;
     width: $ancho;
     height: 100vh;
+    font-family: $fuente-primaria;
+    overflow-x:hidden;
+    background-color: rgba(0, 0, 0, 0);
 }
 
+:root{
+    font-size: 16px;
+}
+
+header{
+    padding: 1rem; 
+    width: $ancho;
+    height: 110px;
+    top: 0;
+    z-index: 99999;
+    align-items: center;
+    position: sticky;
+    background-color: rgba(255, 255, 255, 0.781);
+
+    #logocronoz{
+        border-radius: 100px;   
+        width: 130px;
+        margin-top: -10px;
+        margin-left: 45px;
+    }
+
+    nav.navegacionSuperior{
+        border-radius: 5px;
+        margin: 10px 10px 10px 450px;
+        display: inline;
+        font-size: 27px;
+        text-align: center;
+        ul.NavegacionNav {
+            display: inline-block;
+            height: 40px;
+            text-align: center;
+            text-decoration: none;
+
+            li.NavegacionIteam{
+                text-decoration: none;
+                display: inline;
+                border: 1px solid black;
+                padding: 5px;
+                background-color: white;
+                margin-left: 15px;
+                text-align: center;
+                border-radius: 10px;
+                &:hover{
+                    background-color: $color-primario;
+                }
+            }
+        }
+    }
+    }
+
+ul li a {
+    text-decoration: none; /* Elimina la línea de subrayado de todas las listas no solo header */
+    color: black;
+}
+
+/* Menu mobile */
+#check_menu, .navegacionSuperior label{
+    display: none;
+}
+
+/* pseudoelemento */
+
+p::selection{
+    background-color: $color-primario;
+}
+h2::selection{
+    background-color: $color-primario;
+}
+h3::selection{
+    background-color: $color-primario;
+}
+h4::selection{
+    background-color: $color-primario;
+}
+li::selection{
+    background-color: $color-primario;
+}
+
+h1{
+    font-family:$fuente-titulos;
+    &::selection{
+        background-color: $color-primario
+}
+}
+
+/* Seccion de index. */
+/*  Seccion de novedades de la pagina principal  */
+
+div.contenedorNovedades{
+    background-color: black;
+    text-align: center;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 50px 10px 50px 170px;
+    
+    h1.tituloNovedades{
+        color: white;
+        font-size: $tamanio*2.5;
+    }
+
+    .NovedadesIMG{
+        border-radius: 15px;
+        border: 5px solid black;
+        width: 500px;
+        opacity: .9;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+/* Final de seccion NOVEDADES */
+
+/* Pequeno cartel markeing */
+section.marketing1{
+    font-size: $tamanio*2.5;
+    margin: 50px;
+    text-align: center;
+}
+
+/* Categorias */
+div.Categorias{
+    margin:5px 1px 1px 1px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 550px;
+    border-top: 2px solid black;
+    margin-top: 10px;
+
+    h2.CategoriaTitu{
+        text-align: center;
+        font-size: $tamanio*3;
+        margin-top: 30px;
+    }
+    
+    img.ImgCategorias{
+    width: 400px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 10px 10px 10px 0px; 
+    margin-left: 30px;
+    text-align: center;
+    opacity: .9;
+    &:hover{
+        opacity: 1;
+    }
+    }
+    h2.CategoriaRedirec1{
+        font-size: $tamanio*5;
+        width: 190px;
+        display: inline-block;
+        font-family: 'Backhome';
+        position: absolute ;
+        top: 1280px;
+        right: 1270px;
+        color: black;
+        background-color:rgba(220, 220, 220, 0.527) ;
+    }
+    h2.CategoriaRedirec2{
+        font-size: $tamanio*5;
+        width: 390px;
+        display: inline-block;
+        font-family: 'Backhome';
+        position: absolute ;
+        top: 1280px;
+        right: 726px;
+        color: black;
+        background-color:rgba(220, 220, 220, 0.527) ;
+    }
+    h2.CategoriaRedirec3{
+        font-size: $tamanio*5;
+        width: 190px;
+        display: inline-block;
+        font-family: 'Backhome';
+        position: absolute ;
+        top: 1280px;
+        right: 385px;
+        background-color:rgba(220, 220, 220, 0.527) ;
+        color: black;
+    }
+}
+
+/* Seccion destacados */
+
+button{
+    padding: 3px;
+&:hover{
+background-color: $color-primario;
+}
+}
+div.DestacadosTodo{
+    text-align: center;
+    font-weight: 600; 
+
+    section.Destacados{
+    
+        margin: 0px 705px;
+        width: 450px;
+        padding: 30px;
+        font-size: $tamanio*1.5;
+        text-align: center;
+    }
+    div.ProductoDestacado{
+        width: 460px;
+        display: inline-block;
+        opacity: .95;
+        height: 500px;
+        &:hover{
+            opacity: 1;
+        }
+        img.ImgDestacados{
+            width: 340px;
+            height: 340px;
+            border-radius: 30px;
+            margin: 10px 10px 1px  1px;
+            display: inline-block;
+            border: 3px solid black;
+            
+        }
+    }
 
 
+}
+/* link hacia los productos */
 
+section.ProductoRedirec{
+    width: $ancho;
+    text-align: center;
+    padding: 50px;
+
+    a.TextRedirec1{
+        width: 450px;
+        padding: 10px;
+        background-color: white;
+        font-size: 26px;
+        font-family: $fuente-primaria;
+        text-align: center;
+        border: 2px solid black;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        border-radius: 10px;
+        &:hover{
+            background-color:$color-primario ;
+            }
+    }
+}
+/* Fin seccion destacados */
+
+/* Seccion sobre los satinados */
+
+div.Satinados{
+    display: grid;
+    justify-content: center;
+    width: 100vh;
+    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 400px;
+    gap: 5px;
+
+    img.ImgSatinados{
+        width: 250px;
+    }
+
+    h2.TextMarketing{
+        color: black;
+        text-align: center;
+        font-family: 'Backhome';
+        font-size: 60px;
+    }
+}
+
+/* Fin sobre los satinados */
+
+/* Seccion final de la pagina */
+section.Final{
+    text-align: center;
+    
+    a.TextRedirec{
+        width: 640px;
+        padding: 10px;
+        background-color: white;
+        font-size: 20px;
+        font-family: $fuente-primaria;
+        text-align: center;
+        border: 2px solid black;
+        display: inline-block;
+        margin-top: 60px;
+        text-decoration: none;
+        color: black;
+        border-radius: 10px;
+        &:hover{
+            background-color:$color-primario ;
+            }
+    }
+
+    div.final1{
+    display: inline-block;
+    padding: 90px;
+
+    img.ImgResumen{
+        width: 200px;
+        padding: 25px;
+    }
+    p.textfinal1{
+        font-weight: 500;
+        padding: 10px;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+}
+}
+
+/* INICIO SECCION FOOTER */
+footer{
+    margin: 0px 0px 60px 10px;
+    width: $ancho;
+    border-top: 2px solid black ;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 250px;
+    text-align: center;
+    background-color: white;
+    font-size: 18px;
+    ul.sinPunto{
+        list-style-type: none;    
+    }
+    .icon-footer{ 
+        width: 15px;
+    }
+
+    #email:focus{
+        background-color: rgba(128, 128, 128, 0.37);
+    } 
+    .RedesSociales form{
+        font-size: 13px;
+    }
+    #logocronoz2{
+        border-radius: 100px; 
+        width: 150px;
+        position: relative;
+        top: 50px;
+        left: 80px;
+        
+    }  
+}
+/* Final SECCION FOOTER */
+
+
+/* Pagina productos */
+
+/* Para la pagina productos todas las imagenes en su devido div
+tienen aplicado el mismo CSS class que las imagenes del index
+que se encuentran en la seccion destacados. ProdcutosDestacados 
+y imgDestacados */
+ul.ProductoDestacado{
+    top: -50px;
+    list-style-type: none;
+    text-align: center;
+}
+h1.titulo_categorias {
+    font-size: 90px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    width: $ancho;
+}
+#Living{
+    font-family: $fuente-primaria;
+    font-size: 80px;
+    width:$ancho;
+    padding: 10px;
+    margin-left: -15px;
+    font-weight: 500;
+
+}
+#ComedorCocina{
+    font-family: $fuente-primaria;
+    font-size: 80px;
+    width: $ancho;
+    padding: 10px;
+    margin-left: -15px;
+    font-weight: 500;
+}
+#Otros{
+    font-family: $fuente-primaria;
+    font-size: 80px;
+    width: $ancho;
+    padding: 10px;
+    margin-left: -10px;
+    font-weight: 500;
+}
+
+.grid1{
+    max-width: 100%;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 500px ;
+    /* margin-left: 200px; */
+    margin: 0 auto;
+    margin-bottom: 150px;
+
+} 
+section.proximamenteVideo{
+    width: 270px;
+    height: 500px;
+    font-size: 18px;
+    position: absolute;
+    left: 1500px;
+    top: 2250px;
+    text-align: center;
+    color: rgba(3, 0, 0, 0.904);
+    border-radius: 30px;
+    z-index: 9;
+    video.video1{
+        width: 200px;
+        border-radius: 30px;
+    }
+}
+/* tamano adaptado es para algunas imagenes que tienen un formato diferente , para que todas 
+queden iguales y lograr buen orden */
+img.tamanoAdaptado{
+    width: 340px;
+    height: 340px;
+    border-radius: 30px;
+    border: 3px solid black;
+}
+/* FIN pagina productos. */
+
+/* INICIO PAGINA NOSOTROS */
+section.text_nosotros{
+    text-align: center;
+    /* position: relative; */
+    /* top: -500px;
+    left: 800px; */
+    font-size: 20px;
+    padding: 20px;
+    h1.title_nosotros{
+        font-size: 50px;
+        margin: 0px 0px 40px;
+    }
+    img.img_nosotros{
+        width: 350px;
+        border-radius: 10px;
+        padding: 1px;
+    }
+}
+/* Fin pagina nosotros */
+
+/* INICIO PAGINA PROYECTOS A MEDIDA */
+
+h1.title_medida{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 80px;
+}
+p.text-medida{
+    font-size: 30px;
+    text-align: center;
+    width: $ancho/2;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    margin-top: 10px;
+}
+
+ol.pasos-seguir{
+    font-size: 25px;
+    font-weight: 600;
+    height: 500px;
+    padding: 30px; 
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    width: $ancho/2;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    }
+
+/* fin pagina proyectos a medida */
+
+/* INICIO PAGINA CONTACTO */
+.contacto-info{
+    display:flex ; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content:center;
+    align-items: center;
+    margin-bottom: 80px;
+    div.contacto-section{
+        font-size: 25px;
+        text-align: center;
+        width: 35%;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        img.img-contacto{
+            width: 20px;
+        }
+    }
+    div.google-maps{
+        padding: 50px;
+        width: 35%;
+        h2.google-text{
+            font-size: 30px;
+            width: 80%;
+        }
+    }
+}
 
 
 
