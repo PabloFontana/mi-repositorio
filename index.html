@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logocronoz.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Cronoz muebles industriales</title>
+    <link rel="stylesheet" href="./css/animaciones.css">
+    <title>Inicio - Cronoz muebles industriales</title>
+    <meta name="description" content="Compra los mejores muebles industriles de Crnoz desde tu casa. Tenemos 
+    escritorios, muebles tv y más. Hacé tu pedido y pagalo online. ">
+    <meta name="keywords" content="HTML, ASP ,JS, META, MUEBLES, INDUSTRIAL, CARPINTERIA, ESCRITORIO, RACKTV, MESA,
+    CASA, DECORACION, MINIMALISTA, ENVIO">
 </head>
 
 <body>
     <!--Seccion logo y navegacion-->
     <header>
-        <img id="logocronoz" src="./img/logocronoz.png"  alt="imagen de logo Cronoz"> 
+        <img id="logocronoz" src="./img/logocronoz.png"  alt="imagen de logo Cronoz" title="Logo Cronoz"> 
         <nav class="navegacionSuperior">
             <!-- Menu mobile checkbox -->
             <input type="checkbox" id="check_menu">
@@ -38,7 +44,7 @@
 
     <div class="contenedorNovedades">
         
-        <h1 class="tituloNovedades">Novedades/Ofertas</h1>
+        <h1 class="tituloNovedades titulo-3 ">Novedades/Ofertas</h1>
         <!--estas 3 imaganees pertenecen a las novedades actuales-->
         <a href="./productos.html#escritorio"><img src="./img/escritorio3cajones.png" class="NovedadesIMG" title="Escritorio con cajones"  alt="Esta es una imagen de un escritorio que se encuentra en novedades de la pagina"></a>
         <a href="./productos.html#mesasilla"><img src="./img/combo-comedor4sillas.png" class="NovedadesIMG" title="Combo mesa + 4 sillas"  alt="Esta es una imagen de un combo comedor con sillas incluidas que se encuentra en novedades de la pagina"></a>
@@ -77,28 +83,28 @@
         <h3>Los preferidos de nuestros clientes </h3>
     </section>  
     <div class="ProductoDestacado card mb-3">
-        <img src="./img/combo-comedor4sillas.png" class="ImgDestacados" alt="Imagen de combo comedor mesa mas 4 sillas"> 
+        <img src="./img/combo-comedor4sillas.png" class="ImgDestacados" title="Mesa comedor combo" alt="Imagen de combo comedor mesa mas 4 sillas"> 
             <h3>Combo comedor- Mesa + 4 sillas</h3> 
             <p>Precio: $</p>
             <button>Agregar al carrito</button>
     </div>
 
     <div class="ProductoDestacado card mb-3">
-        <img src="./img/escritorio3cajones.png" class="ImgDestacados" alt="Imagen escritorio con 3 cajones">
+        <img src="./img/escritorio3cajones.png" class="ImgDestacados" title="Escritorio" alt="Imagen escritorio con 3 cajones">
             <h3>Escritorio con cajones</h3>
             <p>Precio: $</p>
             <button>Agregar al carrito</button>
     </div>
 
     <div class="ProductoDestacado card mb-3">
-        <img src="./img/mesaratonera.png" class="ImgDestacados"  alt="Imagen de mesa ratonera">
+        <img src="./img/mesaratonera.png" class="ImgDestacados" title="Mesa ratonera" alt="Imagen de mesa ratonera">
             <h3>Mesa ratonera</h3>
             <p>Precio: $</p>
             <button>Agregar al carrito</button>
     </div>
     
     <div class="ProductoDestacado card mb-3">
-        <img src="./img/rack.jpg" class="ImgDestacados" alt="Imagen de rack para tv">
+        <img src="./img/rack.jpg" class="ImgDestacados" title="Rack para TV" alt="Imagen de rack para tv">
             <h3>Rack para TV</h3>
             <p>Precio: $</p>
             <button>Agregar al carrito</button>
@@ -117,7 +123,7 @@
 
     <div class="Satinados"> 
     <!--Las marcas y colores de madera que se trabajan-->
-    <img src="./img/colores-alaventa.png" class="ImgSatinados" alt="Imagen de los distintos satinados disponibles">
+    <img src="./img/colores-alaventa.png" class="ImgSatinados" title="Gama de satinados" alt="Imagen de los distintos satinados disponibles">
     <h2 class="TextMarketing">Maderas que marcan la diferencia, pero con tu estilo, elegí tu satinado favorito</h2>
     
 </div>
@@ -146,7 +152,16 @@
     </div>
 </section>
 
+
+
+<!-- redes -->
+<div class="iconos-sociales">
+    <a href="#logocronoz"><div class="social facebook"></div></a>
+    <a href="#logocronoz"><div class="social instagram"></div></a> 
+    <a href="#logocronoz"><div class="social pinterest"></div></a>
+</div>
 <!--Esta etiquetea footer es para poner pie, datos de contacto y link para volver al inicio-->
+
 <footer>
     <section class="NavegacionFooter">
         <h3>Navegacion</h3>

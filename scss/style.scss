@@ -1,11 +1,20 @@
-@import './partials/fonts';
-@import'./partials/variables';
+@import "./partials/fonts";
+@import "./partials/variables";
+@import "./partials/condicionales";
 
-*{
+@mixin tamanio($alto, $ancho){
+    height: $alto;
+    width: $ancho;
+}
+
+
+
+
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 body{
     position: relative;
@@ -22,8 +31,9 @@ body{
 
 header{
     padding: 1rem; 
-    width: $ancho;
-    height: 110px;
+/*     width: $ancho;
+    height: 110px; */
+    @include tamanio(110px, 100%);
     top: 0;
     z-index: 99999;
     align-items: center;
@@ -113,7 +123,6 @@ div.contenedorNovedades{
     
     h1.tituloNovedades{
         color: white;
-        font-size: $tamanio*2.5;
     }
 
     .NovedadesIMG{
@@ -202,7 +211,8 @@ div.Categorias{
 /* Seccion destacados */
 
 button{
-    padding: 3px;
+    padding: 5px;
+    border-radius: 5px;
 &:hover{
 background-color: $color-primario;
 }
@@ -210,7 +220,6 @@ background-color: $color-primario;
 div.DestacadosTodo{
     text-align: center;
     font-weight: 600; 
-
     section.Destacados{
     
         margin: 0px 705px;
@@ -221,6 +230,8 @@ div.DestacadosTodo{
     }
     div.ProductoDestacado{
         width: 460px;
+        background-color: rgb(32, 32, 32);
+        color: white;
         display: inline-block;
         opacity: .95;
         height: 500px;
@@ -235,6 +246,9 @@ div.DestacadosTodo{
             display: inline-block;
             border: 3px solid black;
             
+        }
+        h3{
+            font-size: 24px;
         }
     }
 
@@ -332,6 +346,19 @@ section.Final{
 }
 }
 
+.iconos-sociales{
+width: 150px;
+position: relative;
+margin-left: 1700px;
+
+.social{
+    width: 45px;
+    height: 45px;
+    /* position: sticky; */
+    display: inline-block;
+    
+}
+}
 /* INICIO SECCION FOOTER */
 footer{
     margin: 0px 0px 60px 10px;
@@ -453,13 +480,12 @@ img.tamanoAdaptado{
 /* INICIO PAGINA NOSOTROS */
 section.text_nosotros{
     text-align: center;
-    /* position: relative; */
-    /* top: -500px;
-    left: 800px; */
+    width: 80%;
+    margin: 0 auto;
     font-size: 20px;
     padding: 20px;
     h1.title_nosotros{
-        font-size: 50px;
+        font-size: $tamanio*5;
         margin: 0px 0px 40px;
     }
     img.img_nosotros{
@@ -539,5 +565,7 @@ ol.pasos-seguir{
 
 
 
+/* prueba bucles */
+@import "./partials/bucles";
 /* Importante las queries queden aisladas al final. Por escadalada de la misma  */
 @import './partials/queries';

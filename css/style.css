@@ -4,12 +4,11 @@
   font-family: "Backhome";
   src: url(../font/Backhome.otf);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
 body {
   position: relative;
   width: 100%;
@@ -25,8 +24,10 @@ body {
 
 header {
   padding: 1rem;
-  width: 100%;
+  /*     width: $ancho;
+      height: 110px; */
   height: 110px;
+  width: 100%;
   top: 0;
   z-index: 99999;
   align-items: center;
@@ -115,7 +116,6 @@ div.contenedorNovedades {
 }
 div.contenedorNovedades h1.tituloNovedades {
   color: white;
-  font-size: 2.5rem;
 }
 div.contenedorNovedades .NovedadesIMG {
   border-radius: 15px;
@@ -199,7 +199,8 @@ div.Categorias h2.CategoriaRedirec3 {
 
 /* Seccion destacados */
 button {
-  padding: 3px;
+  padding: 5px;
+  border-radius: 5px;
 }
 button:hover {
   background-color: rgba(255, 140, 0, 0.603);
@@ -218,6 +219,8 @@ div.DestacadosTodo section.Destacados {
 }
 div.DestacadosTodo div.ProductoDestacado {
   width: 460px;
+  background-color: rgb(32, 32, 32);
+  color: white;
   display: inline-block;
   opacity: 0.95;
   height: 500px;
@@ -232,6 +235,9 @@ div.DestacadosTodo div.ProductoDestacado img.ImgDestacados {
   margin: 10px 10px 1px 1px;
   display: inline-block;
   border: 3px solid black;
+}
+div.DestacadosTodo div.ProductoDestacado h3 {
+  font-size: 24px;
 }
 
 /* link hacia los productos */
@@ -315,6 +321,18 @@ section.Final div.final1 p.textfinal1 {
   padding: 10px;
   font-size: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.iconos-sociales {
+  width: 150px;
+  position: relative;
+  margin-left: 1700px;
+}
+.iconos-sociales .social {
+  width: 45px;
+  height: 45px;
+  /* position: sticky; */
+  display: inline-block;
 }
 
 /* INICIO SECCION FOOTER */
@@ -438,14 +456,13 @@ img.tamanoAdaptado {
 /* INICIO PAGINA NOSOTROS */
 section.text_nosotros {
   text-align: center;
-  /* position: relative; */
-  /* top: -500px;
-  left: 800px; */
+  width: 80%;
+  margin: 0 auto;
   font-size: 20px;
   padding: 20px;
 }
 section.text_nosotros h1.title_nosotros {
-  font-size: 50px;
+  font-size: 5rem;
   margin: 0px 0px 40px;
 }
 section.text_nosotros img.img_nosotros {
@@ -518,6 +535,38 @@ ol.pasos-seguir {
   width: 80%;
 }
 
+/* prueba bucles */
+.titulo-1 {
+  font-size: 1rem;
+}
+
+.titulo-2 {
+  font-size: 2rem;
+}
+
+.titulo-3 {
+  font-size: 3rem;
+}
+
+.titulo-4 {
+  font-size: 4rem;
+}
+
+.facebook {
+  background-image: url("../img/social/facebook.svg");
+  background-repeat: no-repeat;
+}
+
+.instagram {
+  background-image: url("../img/social/instagram.svg");
+  background-repeat: no-repeat;
+}
+
+.pinterest {
+  background-image: url("../img/social/pinterest.svg");
+  background-repeat: no-repeat;
+}
+
 /* Importante las queries queden aisladas al final. Por escadalada de la misma  */
 /* Responsive Grids l */
 @media (max-width: 1440px) {
@@ -531,7 +580,7 @@ ol.pasos-seguir {
   nav.navegacionSuperior {
     margin: 10px 10px 10px 10px;
     font-size: 14px;
-    background-color: red;
+    /* background-color: red; */
   }
   section.proximamenteVideo {
     left: 850px;
