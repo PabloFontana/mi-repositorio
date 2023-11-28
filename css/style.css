@@ -106,35 +106,51 @@ h1::selection {
 }
 
 /* Seccion de index. */
-/*  Seccion de novedades de la pagina principal  */
-div.contenedorNovedades {
+div.bloque-bienvenida {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  /* Pequeno cartel markeing */
+  /*  Seccion de novedades de la pagina principal  */
+}
+div.bloque-bienvenida section.marketing1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 50px;
+}
+div.bloque-bienvenida div.contenedorNovedades {
   background-color: black;
   text-align: center;
   border-radius: 15px;
   display: inline-block;
+  width: 70%;
   margin: 50px 10px 50px 170px;
+  position: relative;
+  justify-content: end;
 }
-div.contenedorNovedades h1.tituloNovedades {
+div.bloque-bienvenida div.contenedorNovedades h2.tituloNovedades {
   color: white;
+  text-align: center;
 }
-div.contenedorNovedades .NovedadesIMG {
+div.bloque-bienvenida div.contenedorNovedades .NovedadesIMG {
   border-radius: 15px;
   border: 5px solid black;
   width: 500px;
   opacity: 0.9;
 }
-div.contenedorNovedades .NovedadesIMG:hover {
+div.bloque-bienvenida div.contenedorNovedades .NovedadesIMG:hover {
   opacity: 1;
+}
+div.bloque-bienvenida div.contenedorNovedades button:hover {
+  background-color: rgba(210, 180, 140, 0);
 }
 
 /* Final de seccion NOVEDADES */
-/* Pequeno cartel markeing */
-section.marketing1 {
-  font-size: 2.5rem;
-  margin: 50px;
-  text-align: center;
-}
-
 /* Categorias */
 div.Categorias {
   margin: 5px 1px 1px 1px;
@@ -493,13 +509,14 @@ p.text-medida {
 ol.pasos-seguir {
   font-size: 25px;
   font-weight: 600;
+  gap: 10px;
+  width: 50%;
   height: 500px;
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 10px;
-  width: 50%;
   margin: 0 auto;
   margin-bottom: 70px;
 }
