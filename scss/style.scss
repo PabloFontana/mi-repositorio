@@ -112,17 +112,36 @@ h1{
 }
 
 /* Seccion de index. */
-/*  Seccion de novedades de la pagina principal  */
+div.bloque-bienvenida{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 
+/* Pequeno cartel markeing */
+section.marketing1{
+    text-align: center;
+    font-size: $tamanio*1.6;
+    margin: 50px;
+    
+}
+/*  Seccion de novedades de la pagina principal  */
 div.contenedorNovedades{
     background-color: black;
     text-align: center;
     border-radius: 15px;
     display: inline-block;
+    width: 70%;
     margin: 50px 10px 50px 170px;
-    
-    h1.tituloNovedades{
+    position: relative;
+    justify-content: end;
+    h2.tituloNovedades{
         color: white;
+        text-align: center;
     }
 
     .NovedadesIMG{
@@ -133,16 +152,15 @@ div.contenedorNovedades{
         &:hover{
             opacity: 1;
         }
+        
     }
+    button:hover{
+        background-color: rgba(210, 180, 140, 0);
+    }
+}
 }
 /* Final de seccion NOVEDADES */
 
-/* Pequeno cartel markeing */
-section.marketing1{
-    font-size: $tamanio*2.5;
-    margin: 50px;
-    text-align: center;
-}
 
 /* Categorias */
 div.Categorias{
@@ -217,6 +235,8 @@ button{
 background-color: $color-primario;
 }
 }
+
+
 div.DestacadosTodo{
     text-align: center;
     font-weight: 600; 
@@ -278,6 +298,7 @@ section.ProductoRedirec{
             }
     }
 }
+
 /* Fin seccion destacados */
 
 /* Seccion sobre los satinados */
@@ -506,7 +527,7 @@ h1.title_medida{
 p.text-medida{
     font-size: 30px;
     text-align: center;
-    width: $ancho/2;
+    width: calc($ancho / 2);
     margin: 0 auto;
     padding: 20px;
     border-bottom: 1px solid black;
@@ -517,13 +538,14 @@ p.text-medida{
 ol.pasos-seguir{
     font-size: 25px;
     font-weight: 600;
+    gap: 10px;
+    width: calc($ancho / 2);
     height: 500px;
     padding: 30px; 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 10px;
-    width: $ancho/2;
     margin: 0 auto;
     margin-bottom: 70px;
     }
