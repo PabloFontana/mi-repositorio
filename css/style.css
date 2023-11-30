@@ -23,48 +23,16 @@ body {
 }
 
 header {
-  padding: 1rem;
-  /*     width: $ancho;
-      height: 110px; */
-  height: 110px;
-  width: 100%;
   top: 0;
   z-index: 99999;
-  align-items: center;
   position: sticky;
-  background-color: rgba(255, 255, 255, 0.781);
 }
 header #logocronoz {
   border-radius: 100px;
   width: 120px;
-  margin-top: -10px;
-  margin-left: 45px;
 }
-header nav.navegacionSuperior {
-  border-radius: 5px;
-  margin: 10px 10px 10px 450px;
-  display: inline;
-  font-size: 27px;
-  text-align: center;
-}
-header nav.navegacionSuperior ul.NavegacionNav {
-  display: inline-block;
-  height: 40px;
-  text-align: center;
-  text-decoration: none;
-}
-header nav.navegacionSuperior ul.NavegacionNav li.NavegacionIteam {
-  text-decoration: none;
-  display: inline;
-  border: 1px solid black;
-  padding: 5px;
-  background-color: white;
-  margin-left: 15px;
-  text-align: center;
-  border-radius: 10px;
-}
-header nav.navegacionSuperior ul.NavegacionNav li.NavegacionIteam:hover {
-  background-color: rgba(255, 140, 0, 0.603);
+header .nav-perso {
+  font-size: 20px;
 }
 
 ul li a {
@@ -120,8 +88,11 @@ div.bloque-bienvenida {
 }
 div.bloque-bienvenida section.marketing1 {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin: 50px;
+}
+div.bloque-bienvenida section.marketing1 h1 {
+  font-size: 4.3rem;
 }
 div.bloque-bienvenida div.contenedorNovedades {
   background-color: black;
@@ -152,19 +123,38 @@ div.bloque-bienvenida div.contenedorNovedades button:hover {
 
 /* Final de seccion NOVEDADES */
 /* Categorias */
-div.Categorias {
-  margin: 5px 1px 1px 1px;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  height: 550px;
-  border-top: 2px solid black;
-  margin-top: 10px;
-}
-div.Categorias h2.CategoriaTitu {
+h2.CategoriaTitu {
   text-align: center;
   font-size: 3rem;
-  margin-top: 30px;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+div.Categorias {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+div.Categorias a {
+  text-decoration: none;
+}
+div.Categorias .categoria1 {
+  position: relative;
+  width: 100%;
+}
+div.Categorias .categoria1 .texto-categoria {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 div.Categorias img.ImgCategorias {
   width: 400px;
@@ -181,36 +171,25 @@ div.Categorias img.ImgCategorias:hover {
 }
 div.Categorias h2.CategoriaRedirec1 {
   font-size: 5rem;
-  width: 190px;
-  display: inline-block;
+  width: 100%;
   font-family: "Backhome";
-  position: absolute;
-  top: 1280px;
-  right: 1270px;
   color: black;
   background-color: rgba(220, 220, 220, 0.527);
 }
 div.Categorias h2.CategoriaRedirec2 {
-  font-size: 5rem;
-  width: 390px;
-  display: inline-block;
+  font-size: 4.5rem;
+  margin: 0 auto;
+  width: 100%;
   font-family: "Backhome";
-  position: absolute;
-  top: 1280px;
-  right: 726px;
   color: black;
   background-color: rgba(220, 220, 220, 0.527);
 }
 div.Categorias h2.CategoriaRedirec3 {
   font-size: 5rem;
-  width: 190px;
-  display: inline-block;
+  width: 100%;
   font-family: "Backhome";
-  position: absolute;
-  top: 1280px;
-  right: 385px;
-  background-color: rgba(220, 220, 220, 0.527);
   color: black;
+  background-color: rgba(220, 220, 220, 0.527);
 }
 
 /* Seccion destacados */
@@ -225,10 +204,10 @@ button:hover {
 div.DestacadosTodo {
   text-align: center;
   font-weight: 600;
+  margin: 0 auto;
 }
 div.DestacadosTodo section.Destacados {
-  margin: 0px 705px;
-  width: 450px;
+  margin: 0 auto;
   padding: 30px;
   font-size: 1.5rem;
   text-align: center;
@@ -261,6 +240,7 @@ section.ProductoRedirec {
   width: 100%;
   text-align: center;
   padding: 50px;
+  margin-bottom: 50px;
 }
 section.ProductoRedirec a.TextRedirec1 {
   width: 450px;
@@ -280,69 +260,34 @@ section.ProductoRedirec a.TextRedirec1:hover {
 }
 
 /* Fin seccion destacados */
-/* Seccion sobre los satinados */
-div.Satinados {
-  display: grid;
-  justify-content: center;
-  width: 100vh;
-  grid-template-columns: repeat(2, 1fr);
-  display: flex;
-  align-items: center;
-  position: relative;
-  left: 400px;
-  gap: 5px;
-}
-div.Satinados img.ImgSatinados {
-  width: 250px;
-}
-div.Satinados h2.TextMarketing {
-  color: black;
-  text-align: center;
-  font-family: "Backhome";
-  font-size: 60px;
-}
-
-/* Fin sobre los satinados */
 /* Seccion final de la pagina */
 section.Final {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  width: 75%;
   text-align: center;
-}
-section.Final a.TextRedirec {
-  width: 640px;
-  padding: 10px;
-  background-color: white;
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  border: 2px solid black;
-  display: inline-block;
-  margin-top: 60px;
-  text-decoration: none;
-  color: black;
-  border-radius: 10px;
-}
-section.Final a.TextRedirec:hover {
-  background-color: rgba(255, 140, 0, 0.603);
 }
 section.Final div.final1 {
-  display: inline-block;
   padding: 90px;
 }
 section.Final div.final1 img.ImgResumen {
-  width: 200px;
+  width: 150px;
   padding: 25px;
 }
 section.Final div.final1 p.textfinal1 {
   font-weight: 500;
-  padding: 10px;
   font-size: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .iconos-sociales {
-  width: 150px;
+  /* width: 150px;
   position: relative;
-  margin-left: 1700px;
+  margin-left: 1700px; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .iconos-sociales .social {
   width: 45px;
@@ -470,18 +415,25 @@ img.tamanoAdaptado {
 
 /* FIN pagina productos. */
 /* INICIO PAGINA NOSOTROS */
-section.text_nosotros {
+.container-nosotros {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 55px;
+}
+.container-nosotros section.text_nosotros {
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px;
 }
-section.text_nosotros h1.title_nosotros {
+.container-nosotros section.text_nosotros h1.title_nosotros {
   font-size: 5rem;
   margin: 0px 0px 40px;
 }
-section.text_nosotros img.img_nosotros {
+.container-nosotros img.img_nosotros {
   width: 350px;
   border-radius: 10px;
   padding: 1px;
@@ -492,11 +444,11 @@ section.text_nosotros img.img_nosotros {
 h1.title_medida {
   font-size: 60px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 p.text-medida {
-  font-size: 30px;
+  font-size: 26px;
   text-align: center;
   width: 50%;
   margin: 0 auto;
@@ -507,36 +459,31 @@ p.text-medida {
 }
 
 ol.pasos-seguir {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   gap: 10px;
   width: 50%;
-  height: 500px;
   padding: 30px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   gap: 10px;
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 
 /* fin pagina proyectos a medida */
 /* INICIO PAGINA CONTACTO */
 .contacto-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
 }
 .contacto-info div.contacto-section {
   font-size: 25px;
   text-align: center;
-  width: 35%;
-  display: inline-block;
+  width: 80%;
+  margin: 0 auto;
   align-items: center;
   align-content: center;
 }
@@ -544,8 +491,9 @@ ol.pasos-seguir {
   width: 20px;
 }
 .contacto-info div.google-maps {
+  margin: 0 auto;
   padding: 50px;
-  width: 35%;
+  width: 100%;
 }
 .contacto-info div.google-maps h2.google-text {
   font-size: 30px;
@@ -594,14 +542,25 @@ ol.pasos-seguir {
   header {
     height: 140px;
   }
-  nav.navegacionSuperior {
-    margin: 10px 10px 10px 10px;
-    font-size: 14px;
-    /* background-color: red; */
+  /* index */
+  div.bloque-bienvenida section.marketing1 {
+    font-size: 1.2rem;
+    width: 100%;
   }
+  div.bloque-bienvenida section.marketing1 h1 {
+    font-size: 4.3rem;
+  }
+  /* Nosotros*/
+  .container-nosotros img.img_nosotros {
+    margin-top: 40px;
+    width: 330px;
+    border-radius: 10px;
+    padding: 1px;
+  }
+  /* productos */
   section.proximamenteVideo {
     left: 850px;
-    top: 1510px;
+    top: 1420px;
   }
   .grid1 {
     width: 90%;
@@ -609,18 +568,46 @@ ol.pasos-seguir {
     grid-template-rows: 500px;
     margin: 0 auto;
     justify-content: center;
+    gap: 5px;
+  }
+  footer {
+    margin: 0px 0px 60px 0px;
+    /* text-align: center; */
+    width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 250px;
+    text-align: center;
+    font-size: 13px;
+    /* contacto */
+  }
+  footer #logocronoz2 {
+    width: 130px;
+    top: 20px;
+    left: 25px;
+  }
+  footer .RedesSociales form {
+    font-size: 10px;
   }
 }
 @media (max-width: 1200px) {
-  header {
-    height: 140px;
-  }
-  ul.NavegacionNav {
-    font-size: 17px;
-    display: inline;
+  /* index */
+  div.bloque-bienvenida section.marketing1 {
+    font-size: 1rem;
     width: 100%;
-    margin-left: -50px;
   }
+  div.bloque-bienvenida section.marketing1 h1 {
+    font-size: 4.3rem;
+  }
+  div.Categorias img.ImgCategorias {
+    width: 350px;
+  }
+  div.contenedorNovedades h2.tituloNovedades {
+    font-size: 2rem;
+    text-align: center;
+  }
+  /* productos */
   .grid1 {
     width: 90%;
     grid-template-columns: repeat(3, 1fr);
@@ -649,7 +636,7 @@ ol.pasos-seguir {
   }
   section.proximamenteVideo {
     left: 750px;
-    top: 1450px;
+    top: 1380px;
   }
   div.ProductoDestacado {
     width: 100%;
@@ -673,23 +660,52 @@ ol.pasos-seguir {
     text-align: center;
     font-size: 13px;
   }
-  #logocronoz2 {
+  footer #logocronoz2 {
     width: 130px;
     top: 20px;
     left: 25px;
   }
+  footer .RedesSociales form {
+    font-size: 10px;
+  }
+  footer .RedesSociales form #email {
+    width: 90px;
+  }
 }
 @media (max-width: 1024px) {
-  header {
-    height: 150px;
+  /* index */
+  div.bloque-bienvenida div.contenedorNovedades {
+    width: 65%;
+  }
+  div.bloque-bienvenida div.contenedorNovedades .NovedadesIMG {
+    width: 350px;
+  }
+  div.Categorias img.ImgCategorias {
+    width: 300px;
+  }
+  section.Final {
     width: 100%;
   }
-  ul.NavegacionNav {
-    display: inline;
-    position: relative;
-    margin-left: -120px;
-    font-size: 15px;
+  /* Nosotros */
+  .container-nosotros {
+    width: 90%;
+    margin: 0 auto;
   }
+  .container-nosotros section.text_nosotros {
+    width: 80%;
+    font-size: 15px;
+    padding: 20px;
+  }
+  .container-nosotros section.text_nosotros h1.title_nosotros {
+    font-size: 3.5rem;
+    margin: 0px 0px 20px;
+  }
+  .container-nosotros img.img_nosotros {
+    width: 350px;
+    border-radius: 10px;
+    padding: 1px;
+  }
+  /* prodc */
   .grid1 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 500px;
@@ -697,8 +713,7 @@ ol.pasos-seguir {
     gap: 5px;
   }
   section.proximamenteVideo {
-    left: 630px;
-    top: 1940px;
+    display: none;
   }
   #Living {
     font-size: 70px;
@@ -710,70 +725,133 @@ ol.pasos-seguir {
   #Otros {
     font-size: 70px;
   }
+  /* contacto*/
+  .contacto-info {
+    width: 90%;
+  }
+  .contacto-info div.contacto-section {
+    font-size: 23px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contacto-info div.contacto-section img.img-contacto {
+    width: 20px;
+  }
+  .contacto-info div.google-maps {
+    margin: 0 auto;
+    padding: 50px;
+    width: 100%;
+  }
+  .contacto-info div.google-maps iframe {
+    width: 100%;
+  }
+  .contacto-info div.google-maps h2.google-text {
+    font-size: 30px;
+    width: 100%;
+  }
   footer {
     margin: 0px 0px 60px 0px;
     width: 100%;
     padding: 5px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 250px;
     text-align: center;
     font-size: 13px;
   }
-  #logocronoz2 {
-    left: 30px;
-    margin-left: -10px;
+  footer #logocronoz2 {
+    display: none;
+  }
+  footer .RedesSociales form {
+    font-size: 10px;
   }
 }
 @media (max-width: 768px) {
-  /* menu mobile /tablet */
   #logocronoz {
     border-radius: 100px;
     width: 110px;
     margin-top: 3px;
     margin-left: 45px;
   }
-  header {
-    height: 130px;
+  /* index */
+  div.bloque-bienvenida {
+    grid-template-columns: 2fr, 1fr;
   }
-  ul.NavegacionNav {
-    display: none;
-  }
-  .navegacionSuperior label {
-    display: inline-block;
-    position: relative;
-    left: 210px;
-  }
-  .navegacionSuperior label i {
-    font-size: 50px;
-  }
-  .navegacionSuperior #check_menu:checked ~ .NavegacionNav {
-    display: inline;
-    background-color: rgba(10, 1, 1, 0.76);
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    left: 101px;
-    top: 90px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    font-size: 30px;
-    gap: 15px;
-    border-radius: 5px;
-    z-index: 9999;
-  }
-  li.NavegacionIteam {
-    border: 0px solid black;
-    padding: 5px;
-    background-color: rgba(238, 237, 237, 0.705);
-    margin-left: 15px;
-    margin-top: 10px;
+  div.bloque-bienvenida section.marketing1 {
     text-align: center;
-    border-radius: 5px;
-    border-bottom: px solid black;
+    font-size: 1rem;
+    margin: 10px;
+    width: 150%;
   }
+  div.bloque-bienvenida section.marketing1 h1 {
+    font-size: 2.5rem;
+  }
+  div.bloque-bienvenida div.contenedorNovedades {
+    width: 60%;
+  }
+  div.bloque-bienvenida div.contenedorNovedades .NovedadesIMG {
+    width: 350px;
+  }
+  div.Categorias {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  div.Categorias img.ImgCategorias {
+    width: 300px;
+  }
+  div.Categorias h2.CategoriaRedirec2 {
+    font-size: 3.7rem;
+  }
+  section.Final {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  section.Final div.final1 {
+    padding: 10px;
+  }
+  section.Final div.final1 img.ImgResumen {
+    width: 150px;
+    padding: 25px;
+  }
+  section.Final div.final1 p.textfinal1 {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  /* Nosotros */
+  .container-nosotros {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .container-nosotros section.text_nosotros {
+    width: 95%;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .container-nosotros section.text_nosotros h1.title_nosotros {
+    font-size: 3.5rem;
+    margin: 0px 0px 20px;
+  }
+  .container-nosotros img.img_nosotros {
+    width: 340px;
+    border-radius: 10px;
+    padding: 1px;
+  }
+  /* proyectos a medida */
+  p.text-medida {
+    font-size: 24px;
+    width: 100%;
+    padding: 30px;
+    margin-top: 10px;
+  }
+  ol.pasos-seguir {
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* productos */
   .grid1 {
     grid-template-columns: repeat(2, 350px);
     grid-template-rows: 480px;
@@ -790,8 +868,7 @@ ol.pasos-seguir {
     margin-top: 0px;
   }
   section.proximamenteVideo {
-    left: 450px;
-    top: 1850px;
+    display: none;
   }
   #Living {
     font-size: 50px;
@@ -806,6 +883,32 @@ ol.pasos-seguir {
     font-size: 50px;
     margin-left: 0px;
   }
+  /* contacto */
+  .contacto-info {
+    grid-template-columns: 1fr;
+  }
+  .contacto-info div.contacto-section {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    font-size: 22px;
+  }
+  .contacto-info div.contacto-section img.img-contacto {
+    width: 13px;
+  }
+  .contacto-info div.google-maps {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  .contacto-info h2.google-text {
+    font-size: 30px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .contacto-info div.google-maps iframe {
+    width: 550px;
+  }
   footer {
     margin: 0px 0px 60px 0px;
     /* text-align: center; */
@@ -816,93 +919,99 @@ ol.pasos-seguir {
     text-align: center;
     background-color: white;
   }
-  #logocronoz2 {
-    border-radius: 100px;
-    width: 130px;
-    position: relative;
-    top: 20px;
-    left: 315px;
-  }
   .RedesSociales form {
     font-size: 13px;
   }
 }
-@media (max-width: 600px) {
-  .grid1 {
-    grid-template-columns: 1fr;
-    grid-template-rows: 500px;
-    width: auto;
-    margin-left: 30px;
-  }
-  section.proximamenteVideo {
-    display: none;
-  }
-  h1.titulo_categorias {
-    width: 100%;
-    font-size: 80px;
-    width: 100%;
-    margin-left: 20px;
-  }
-  footer {
-    width: 107%;
-    display: grid;
-    grid-template-columns: repeat(2, 300px);
-    grid-template-rows: 1fr;
-  }
-  #logocronoz2 {
-    top: 20px;
-    left: 260px;
-  }
-}
 @media (max-width: 480px) {
-  /* menu mobile /tablet */
-  #logocronoz {
-    width: 80px;
-    margin-top: 1px;
-    margin-left: 5px;
+  /* index */
+  div.bloque-bienvenida {
+    grid-template-columns: 1fr;
   }
-  header {
-    height: 105px;
+  div.bloque-bienvenida section.marketing1 {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px;
+    width: 95%;
   }
-  ul.NavegacionNav {
+  div.bloque-bienvenida section.marketing1 h1 {
+    font-size: 2.5rem;
+  }
+  div.bloque-bienvenida div.contenedorNovedades {
+    width: 75%;
+    margin: 0 auto;
+  }
+  div.bloque-bienvenida div.contenedorNovedades .NovedadesIMG {
+    width: 350px;
+  }
+  div.bloque-bienvenida div.contenedorNovedades h2.tituloNovedades {
+    color: white;
+    text-align: center;
+  }
+  div.Categorias {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  div.Categorias img.ImgCategorias {
+    width: 300px;
+  }
+  div.Categorias h2.CategoriaRedirec2 {
+    font-size: 3.7rem;
+  }
+  section.ProductoRedirec a.TextRedirec1 {
+    width: 100%;
+    font-size: 22px;
+    margin: 0 auto;
+  }
+  section.Final {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  section.Final div.final1 {
+    padding: 5px;
+  }
+  section.Final div.final1 img.ImgResumen {
+    width: 150px;
+    padding: 25px;
+  }
+  section.Final div.final1 p.textfinal1 {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  /* Nosotros */
+  .container-nosotros {
+    width: 98%;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container-nosotros section.text_nosotros {
+    width: 95%;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .container-nosotros section.text_nosotros h1.title_nosotros {
+    font-size: 3.5rem;
+    margin: 0px 0px 20px;
+  }
+  .container-nosotros img.img_nosotros {
     display: none;
   }
-  .navegacionSuperior label {
-    display: inline-block;
-    position: relative;
-    left: 300px;
-    top: -180px;
-  }
-  .navegacionSuperior label i {
-    font-size: 50px;
-  }
-  .navegacionSuperior #check_menu:checked ~ .NavegacionNav {
-    /* display: block; */
-    background-color: rgba(10, 1, 1, 0.76);
+  /* proyectos a medida */
+  p.text-medida {
+    font-size: 20px;
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    left: 110px;
-    top: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    font-size: 30px;
-    gap: 15px;
-    z-index: 9999;
-    border-radius: 10px;
-  }
-  li.NavegacionIteam {
-    border: 0px solid black;
-    padding: 5px;
-    background-color: rgba(238, 237, 237, 0.705);
-    margin-left: 15px;
+    padding: 30px;
     margin-top: 10px;
-    text-align: center;
-    border-radius: 5px;
-    border-bottom: px solid black;
   }
+  ol.pasos-seguir {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 19px;
+  }
+  /* productos */
   .grid1 {
     grid-template-columns: 1fr;
     grid-template-rows: 500px;
@@ -935,91 +1044,233 @@ ol.pasos-seguir {
     text-align: center;
     background-color: white;
   }
-  #logocronoz2 {
-    border-radius: 100px;
-    width: 150px;
-    position: relative;
-    top: 35px;
-    left: 155px;
-  }
-  .RedesSociales form {
-    font-size: 15px;
-  }
   /* pagina de contacto */
-  .contacto-info {
-    display: grid;
-    grid-template-columns: 1300px;
-    grid-template-rows: 400px;
-    margin: 0 auto;
-  }
-  div.contacto-section {
+  .contacto-info div.contacto-section {
     margin: 0 auto;
     width: 100%;
     text-align: start;
+    text-align: center;
   }
-  div.contacto-section img.img-contacto {
+  .contacto-info div.contacto-section img.img-contacto {
     width: 13px;
   }
-  div.google-maps {
-    width: 150px;
+  .contacto-info div.google-maps {
+    width: 100%;
     margin: 0 auto;
   }
-  h2.google-text {
+  .contacto-info h2.google-text {
     font-size: 30px;
     width: 100%;
     margin: 0 auto;
   }
-  div.google-maps iframe {
+  .contacto-info div.google-maps iframe {
     width: 350px;
   }
   /* Pagina proyectos a medida */
-  ol.pasos-seguir {
-    width: 400px;
-    height: 800px;
-  }
 }
 @media (max-width: 320px) {
-  header {
-    width: 140%;
-  }
-  .grid1 {
-    width: 100%;
+  /* index */
+  div.bloque-bienvenida {
     grid-template-columns: 1fr;
-    grid-template-rows: 500px;
+  }
+  div.bloque-bienvenida section.marketing1 {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 10px;
+    width: 95%;
+  }
+  div.bloque-bienvenida section.marketing1 h1 {
+    font-size: 2.5rem;
+  }
+  div.bloque-bienvenida div.contenedorNovedades {
+    width: 85%;
     margin: 0 auto;
-    margin-left: 70px;
+  }
+  div.bloque-bienvenida div.contenedorNovedades .NovedadesIMG {
+    width: 350px;
+  }
+  div.bloque-bienvenida div.contenedorNovedades h2.tituloNovedades {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+  div.Categorias {
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  div.Categorias img.ImgCategorias {
+    width: 280px;
+    margin: 0 auto;
+  }
+  div.Categorias h2.CategoriaRedirec2 {
+    font-size: 3.7rem;
+  }
+  section.ProductoRedirec a.TextRedirec1 {
+    width: 100%;
+    font-size: 22px;
+    margin: 0 auto;
+  }
+  div.DestacadosTodo {
+    text-align: center;
+    font-weight: 600;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 12px;
+  }
+  div.DestacadosTodo section.Destacados {
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  div.DestacadosTodo div.ProductoDestacado {
+    width: 95%;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    display: inline-block;
+    opacity: 0.95;
+    height: 450px;
+  }
+  div.DestacadosTodo div.ProductoDestacado:hover {
+    opacity: 1;
+  }
+  div.DestacadosTodo div.ProductoDestacado img.ImgDestacados {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    margin: 10px 10px 1px 1px;
+    display: inline-block;
+    border: 3px solid black;
+  }
+  div.DestacadosTodo div.ProductoDestacado h3 {
+    font-size: 24px;
+  }
+  section.Final {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  section.Final div.final1 {
+    padding: 5px;
+  }
+  section.Final div.final1 img.ImgResumen {
+    width: 150px;
+    padding: 25px;
+  }
+  section.Final div.final1 p.textfinal1 {
+    font-weight: 500;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  /* Nosotros */
+  .container-nosotros {
+    width: 98%;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container-nosotros section.text_nosotros {
+    width: 95%;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .container-nosotros section.text_nosotros h1.title_nosotros {
+    font-size: 2.5rem;
+    margin: 0px 0px 20px;
+  }
+  .container-nosotros img.img_nosotros {
+    display: none;
+  }
+  /* proyectos a medida */
+  h1.title_medida {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  p.text-medida {
+    font-size: 18px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  ol.pasos-seguir {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+  /* productos */
+  .grid1 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .grid1 .ProductoDestacado {
+    text-align: center;
+    margin: 0 auto;
+    margin-left: -15px;
+  }
+  .grid1 .ProductoDestacado img.tamanoAdaptado {
+    width: 280px;
+    height: 280px;
   }
   section.proximamenteVideo {
     display: none;
   }
   #Living {
-    width: 100%;
     font-size: 40px;
-    margin: 0 auto;
-    margin-left: 55px;
   }
   #ComedorCocina {
-    font-size: 40px;
+    font-size: 28px;
   }
   #Otros {
     font-size: 40px;
-    width: 100%;
-    margin-left: 55px;
   }
   h1.titulo_categorias {
-    padding: 0px;
-    margin-left: 75px;
+    margin-left: 0px;
   }
   footer {
-    margin: 0px 0px 50px 0px;
-    gap: 10px;
+    margin: 0px 0px 60px 0px;
+    /* text-align: center; */
+    width: 100%;
+    padding: 10px;
     display: grid;
-    grid-template-columns: 450px;
-    grid-template-rows: 200px;
-    font-size: 14px;
-    /* background-color: rgb(255, 0, 0); */
-    width: 480px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    text-align: center;
+    background-color: white;
   }
+  /* pagina de contacto */
+  .contacto-info {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    margin-left: -8px;
+  }
+  .contacto-info div.contacto-section {
+    width: 90%;
+    text-align: center;
+    font-size: 15px;
+    margin: 0 auto;
+  }
+  .contacto-info div.contacto-section img.img-contacto {
+    width: 13px;
+  }
+  .contacto-info div.google-maps {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .contacto-info div.google-maps h2.google-text {
+    font-size: 24px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contacto-info div.google-maps iframe {
+    margin: 0 auto;
+    width: 240px;
+    height: 300px;
+  }
+  /* Pagina proyectos a medida */
 }
 @media (min-width: 1600px) {
   .RedesSociales form {

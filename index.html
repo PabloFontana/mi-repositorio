@@ -18,30 +18,43 @@
 <body>
     <!--Seccion logo y navegacion-->
     <header>
-        <img id="logocronoz" src="./img/logocronoz.png"  alt="imagen de logo Cronoz" title="Logo Cronoz"> 
-        <nav class="navegacionSuperior">
-            <!-- Menu mobile checkbox -->
-            <input type="checkbox" id="check_menu">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img id="logocronoz" src="./img/logocronoz.png"  alt="imagen de logo Cronoz" title="Logo Cronoz"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav nav-perso">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="./productos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./productos.html#top-cat">Living</a></li>
+                        <li><a class="dropdown-item" href="./productos.html#ComedorCocina">Cocina/Comedor</a></li>
+                        <li><a class="dropdown-item" href="./productos.html#Otros">Otros</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./proyectosamedida.html">Proyectos a medida</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
             
-            <ul class="NavegacionNav">
-                <li class="NavegacionIteam">
-                    <a href="./index.html">Inicio</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./productos.html">Productos</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./nosotros.html">Nosotros</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./proyectosamedida.html">Proyectos a medida</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./contacto.html">Contacto</a></li>
-            </ul>
-            <label for="check_menu">
-                <i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/></i>
-            </label>
-        </nav>
-    
+        </ul>
+        </div>
+        </div>
+    </nav>
     </header>
-
+    
     <div class="bloque-bienvenida">
         <section class="marketing1">
             <h1>Bienvenidos a Cronoz</h1>
@@ -84,20 +97,30 @@
     </div>
 </div>
 
-
+    <h2 class="CategoriaTitu">Categorias</h2>
     <div class="Categorias">
-    <!--Aqui iran 3 imagenes sobre las categorias, cocina ,linving y otros-->
+    <!--Aqui iran 3 imagenes sobre las categorias, cocina ,linving y otros-->    
+        <div class="categoria1">
+            <a href="./productos.html#top-cat"><img src="./img/categorialiving.jpg" class="ImgCategorias" alt="Imagen de categoria Living"></a> 
+            <div class="texto-categoria">
+                <a href="./productos.html#top-cat"><h2 class="CategoriaRedirec1">Living</h2></a>
+            </div>
+        </div>
+
+
+        <div class="categoria1">
+            <a href="./productos.html#ComedorCocina"><img src="./img/categoriacocina.png" class="ImgCategorias" alt="Imagen de categoria Cocina"></a>
+            <div class="texto-categoria">
+                <a href="./productos.html#ComedorCocina"><h2 class="CategoriaRedirec2">Cocina/Comedor</h2></a>
+            </div>
+        </div>
         
-        <h2 class="CategoriaTitu">Categorias</h2>
-        
-        <a href="./productos.html#Living"><img src="./img/categorialiving.jpg" class="ImgCategorias" alt="Imagen de categoria Living"></a> 
-        <a href="./productos.html#Living"><h2 class="CategoriaRedirec1">Living</h2></a>
-        
-        <a href="./productos.html#ComedorCocina"><img src="./img/categoriacocina.png" class="ImgCategorias" alt="Imagen de categoria Cocina"></a>
-        <a href="./productos.html#ComedorCocina"><h2 class="CategoriaRedirec2">Cocina/Comedor</h2></a>
-        
-        <a href="./productos.html#Otros"><img src="./img/categoriaotrs.jpg"  class="ImgCategorias" alt="Imagen de categoria Otros"></a>
-        <a href="./productos.html#Otros"><h2 class="CategoriaRedirec3">Otros</h2></a>
+        <div class="categoria1">
+            <a href="./productos.html#Otros"><img src="./img/categoriaotrs.jpg"  class="ImgCategorias" alt="Imagen de categoria Otros"></a>
+            <div class="texto-categoria">
+                <a href="./productos.html#Otros"><h2 class="CategoriaRedirec3">Otros</h2></a>
+            </div>
+        </div>
     </div>
 
 
@@ -145,23 +168,9 @@
     </section>
 
 
-
-
-    <div class="Satinados"> 
-    <!--Las marcas y colores de madera que se trabajan-->
-    <img src="./img/colores-alaventa.png" class="ImgSatinados" title="Gama de satinados" alt="Imagen de los distintos satinados disponibles">
-    <h2 class="TextMarketing">Maderas que marcan la diferencia, pero con tu estilo, elegí tu satinado favorito</h2>
-    
-</div>
-
 <!--Seccion de publicidad ,envios, medios de pago y asesoria-->   
 <section class="Final">
-    
-    <div>
-        <a href="./productos.html" class="TextRedirec">¡MUEBLES INDUSTRIALES, DE ALTA CALIDAD Y A MEDIDA!¿Te gustaría renovar
-    tu hogar? ¡Desde tu casa compralo directo de fabrica con un click!</a>
-    </div>
-    
+
     <div class="final1">
         <img src="./img/camionPNG.png" class="ImgResumen" alt="Imagen camion envios">
         <p class="textfinal1">Envios gratis a todo el pais</p>
@@ -242,5 +251,6 @@
 
 <!-- Bootstrap js -->
 <script src="./js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

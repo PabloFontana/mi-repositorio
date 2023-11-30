@@ -16,29 +16,42 @@
 </head>
 <body>
     <header>
-        <img id="logocronoz" src="./img/logocronoz.png"  alt="imagen de logo Cronoz"> 
-        <nav class="navegacionSuperior">
-            <!-- Menu mobile checkbox -->
-            <input type="checkbox" id="check_menu">
-            
-            <ul class="NavegacionNav">
-                <li class="NavegacionIteam">
-                    <a href="./index.html">Inicio</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./productos.html">Productos</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./nosotros.html">Nosotros</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./proyectosamedida.html">Proyectos a medida</a></li>
-                <li class="NavegacionIteam">
-                    <a href="./contacto.html">Contacto</a></li>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img id="logocronoz" src="./img/logocronoz.png"  alt="imagen de logo Cronoz" title="Logo Cronoz"> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav nav-perso">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="./productos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./productos.html#top-cat">Living</a></li>
+                            <li><a class="dropdown-item" href="./productos.html#ComedorCocina">Cocina/Comedor</a></li>
+                            <li><a class="dropdown-item" href="./productos.html#Otros">Otros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./proyectosamedida.html">Proyectos a medida</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                
             </ul>
-            <label for="check_menu">
-                <i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/></i>
-            </label>
+            </div>
+            </div>
         </nav>
-    
-    </header>
+        </header>
     <h1 class="title_medida">A tu gusto y medida</h1>
     <article>
         <p class="text-medida">Te gusto uno de nuestros proyectos, pero lo queres a unas medidas exclusivas para vos? En Cronoz 
@@ -111,5 +124,6 @@
         <img id="logocronoz2" src="./img/logocronoz.png" alt="imagen de logo Cronoz"> 
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

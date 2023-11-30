@@ -6,19 +6,32 @@
     }
     header{
         height: 140px;
-    
+    }
+    /* index */
+    div.bloque-bienvenida{
+        section.marketing1{
+        font-size: $tamanio*1.2;
+        width: 100%;
+        h1{
+            font-size: $tamanio*4.3;
+        }
+    }
+}
+    /* Nosotros*/
+    .container-nosotros{
+    img.img_nosotros{
+            margin-top: 40px;
+            width: 330px;
+            border-radius: 10px;
+            padding: 1px;
+        }
     }
 
-    nav.navegacionSuperior{
-        margin: 10px 10px 10px 10px;
-        font-size: 14px;
-        /* background-color: red; */
-        
-    }
-    
+
+        /* productos */
     section.proximamenteVideo{
             left: 850px;
-            top: 1510px;
+            top: 1420px;
     }
     .grid1{         
             width: 90%;
@@ -26,19 +39,56 @@
             grid-template-rows: 500px ;
             margin: 0 auto;
             justify-content: center;
+            gap: 5px;
     } 
-    }
     
+    footer{
+        margin: 0px 0px 60px 0px;
+        /* text-align: center; */
+        width: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: 250px;
+        text-align: center;
+        font-size: 13px;
+    
+    #logocronoz2{
+        width: 130px;
+        top: 20px;
+        left: 25px;
+        
+    }
+    .RedesSociales form{
+        font-size: 10px;
+    }
+    /* contacto */
+}
+}
     @media (max-width:1200px){
-    header{
-        height: 140px;
+    /* index */
+    div.bloque-bienvenida{
+        section.marketing1{
+        font-size: $tamanio*1;
+        width: 100%;
+        h1{
+            font-size: $tamanio*4.3;
+        }
+        }
     }
-    ul.NavegacionNav {
-            font-size: 17px;
-            display: inline;
-            width: 100%;
-            margin-left: -50px;
+    div.Categorias{
+        img.ImgCategorias{
+            width: 350px;
+        }
     }
+
+div.contenedorNovedades{
+    h2.tituloNovedades{
+        font-size: $tamanio*2;
+        text-align: center;
+    }
+}
+    /* productos */
     .grid1{
         width: 90%;
         grid-template-columns: repeat(3,1fr);
@@ -67,7 +117,7 @@
     }
     section.proximamenteVideo{
         left: 750px;
-        top: 1450px;
+        top: 1380px;
     }
     div.ProductoDestacado{
         width:100%;   
@@ -91,29 +141,68 @@
         grid-template-rows: 250px;
         text-align: center;
         font-size: 13px;
-    }
+    
     #logocronoz2{
         width: 130px;
         top: 20px;
         left: 25px;
         
     }
+    .RedesSociales form {
+        font-size: 10px;
+    #email{
+        width: 90px;
+    }
+    }
+    }
     }
     
     @media (max-width:1024px){
-        header{
-            height: 150px;
-            width: 100%;
-            }
         
-        ul.NavegacionNav {
-            display: inline;
-            position: relative;
-            margin-left: -120px;
-            font-size: 15px;
-            
-    
+        
+        /* index */
+        div.bloque-bienvenida{
+            div.contenedorNovedades{
+                width: 65%;
+                
+                .NovedadesIMG{
+                    width: 350px;
+                }
             }
+        }
+
+        div.Categorias{
+            img.ImgCategorias{
+                width: 300px;
+            }
+        }
+        section.Final{
+            width: 100%;
+        
+        }
+
+        /* Nosotros */
+        .container-nosotros{
+            width: 90%;
+            margin: 0 auto;
+        section.text_nosotros{
+            
+            width: 80%;
+            font-size: 15px;
+            padding: 20px;
+            h1.title_nosotros{
+                font-size: $tamanio*3.5;
+                margin: 0px 0px 20px;
+            }
+            }
+        img.img_nosotros{
+                width: 350px;
+                border-radius: 10px;
+                padding: 1px;
+            }
+        }
+        
+        /* prodc */
         .grid1{
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: 500px ;
@@ -121,8 +210,7 @@
             gap: 5px;
         } 
         section.proximamenteVideo{
-            left: 630px;
-            top: 1940px;
+            display: none;
         }
         #Living{
             font-size: 70px;
@@ -135,76 +223,148 @@
         #Otros{
         font-size: 70px;
     }
+    /* contacto*/
+    .contacto-info{
+        width: 90%;
+        div.contacto-section{
+            font-size: 23px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            img.img-contacto{
+                width: 20px;
+            }
+        }
+        div.google-maps{
+            margin: 0 auto;
+            padding: 50px;
+            width: 100%;
+            iframe{
+                width: 100%;
+            }
+            h2.google-text{
+                font-size: 30px;
+                width: 100%;
+            }
+        }
+    }
+
     footer{
         margin: 0px 0px 60px 0px;
         width: 100%;
         padding: 5px;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(4,1fr);
         grid-template-rows: 250px;
         text-align: center;
         font-size: 13px;
-    }
+    
     #logocronoz2{
-        left: 30px;
-        margin-left: -10px;
+        display: none;
+    }
+
+.RedesSociales form{
+    font-size: 10px;
+}
     }
     }
     
     @media (max-width:768px ){
-    /* menu mobile /tablet */
+    
     #logocronoz{
         border-radius: 100px;   
         width: 110px;
         margin-top: 3px;
         margin-left: 45px;
     }
-    header{
-        height: 130px;
+    /* index */
+    div.bloque-bienvenida{
+        grid-template-columns: 2fr,1fr;
+        section.marketing1{
+            text-align: center;
+            font-size: $tamanio*1;
+            margin: 10px;
+            width: 150%;
+            h1{
+                font-size: $tamanio*2.5;
+            }
+        }
+        div.contenedorNovedades{
+            width: 60%;
+            
+            .NovedadesIMG{
+                width: 350px;
+            }
+        }
     }
-    ul.NavegacionNav{
-        display: none;
+
+    div.Categorias{
+        grid-template-columns: repeat(1,1fr);
+        img.ImgCategorias{
+            width: 300px;
+        }
+        h2.CategoriaRedirec2{
+            font-size: $tamanio*3.7;
+            
+            
+        }
     }
-    
-    .navegacionSuperior label{
-        display: inline-block;
-        position: relative;
-        left: 210px;
-    }
-    
-    .navegacionSuperior label i{
-        font-size: 50px;
-    
-    }
-    .navegacionSuperior #check_menu:checked~ .NavegacionNav {
-        display: inline;
-        background-color: rgba(10, 1, 1, 0.76);
+    section.Final{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: 0 auto; 
         width: 100%;
-        height: 100vh;
-        position: absolute;
-        left: 101px;
-        top: 90px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        font-size: 30px;
-        gap: 15px;
-        border-radius: 5px;
-        z-index: 9999;
-    }
-    li.NavegacionIteam{
-        border: 0px solid black;
-        padding: 5px;
-        background-color: rgba(238, 237, 237, 0.705);
-        margin-left: 15px;
-        margin-top: 10px;
         text-align: center;
-        border-radius: 5px;
-        border-bottom: px solid black;
+        div.final1{
+        padding: 10px;
+        img.ImgResumen{
+            width: 150px;
+            padding: 25px;
+        }
+            p.textfinal1{
+                font-weight: 500;
+                font-size: 20px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            }
+    }
+    }
+
+    /* Nosotros */
+    .container-nosotros{
+        width: 98%;
+        margin: 0 auto;
+    section.text_nosotros{
         
+        width: 95%;
+        font-size: 15px;
+        padding: 10px;
+        h1.title_nosotros{
+            font-size: $tamanio*3.5;
+            margin: 0px 0px 20px;
+        }
+        }
+    img.img_nosotros{
+            width: 340px;
+            border-radius: 10px;
+            padding: 1px;
+
+        }
+    }
+    /* proyectos a medida */
+    p.text-medida{
+        font-size: 24px;
+        width: $ancho;
+        padding: 30px;
+        margin-top: 10px;
     }
     
+    ol.pasos-seguir{
+        width: 80%;
+        margin: 0 auto;
+        
+        }
+
+        /* productos */
     .grid1{
         grid-template-columns: repeat(2,350px);
         grid-template-rows: 480px;
@@ -221,8 +381,7 @@
             margin-top: 0px;
         }
         section.proximamenteVideo{
-            left: 450px;
-            top: 1850px;
+            display: none;
         }
         #Living{
             font-size: 50px;
@@ -238,7 +397,31 @@
         font-size: 50px;
         margin-left: 0px;
     }
-    
+    /* contacto */
+    .contacto-info{
+        grid-template-columns: 1fr;
+    div.contacto-section{
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
+        font-size: 22px;
+    }
+    div.contacto-section img.img-contacto{
+        width: 13px; 
+    }
+    div.google-maps{
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+    h2.google-text{
+            font-size: 30px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        div.google-maps iframe{ width: 550px;}
+    }
+
     footer{
         margin: 0px 0px 60px 0px;
         /* text-align: center; */
@@ -249,102 +432,110 @@
         text-align: center;
         background-color: white;
     }
-    #logocronoz2{
-        border-radius: 100px; 
-        width: 130px;
-        position: relative;
-        top: 20px;
-        left: 315px;
-        
-    }
     .RedesSociales form{
         font-size: 13px;
     }
+    }
     
-    }
-    @media (max-width:600px){
-    .grid1{
-        grid-template-columns: 1fr;
-        grid-template-rows: 500px ;
-        width: auto;
-        margin-left: 30px;
-    } 
-    section.proximamenteVideo{
-        display: none;
-    }
-    h1.titulo_categorias {
-            width: 100%;
-            font-size: 80px;
-            width: 100%;
-            margin-left: 20px;
-    }
-    footer{
-        width: 107%;
-        display: grid;
-        grid-template-columns: repeat( 2,300px);
-        grid-template-rows: 1fr;
-    }
-    #logocronoz2{
-        top: 20px;
-        left: 260px;
-    }
-    }
     @media (max-width:480px){
-        /* menu mobile /tablet */
+    /* index */
+    div.bloque-bienvenida{
+        grid-template-columns: 1fr;
+        section.marketing1{
+            text-align: center;
+            font-size: $tamanio*1;
+            margin: 10px;
+            width: 95%;
+            h1{
+                font-size: $tamanio*2.5;
+            }
+        }
+        div.contenedorNovedades{
+            width:75%;
+            margin: 0 auto;
+            .NovedadesIMG{
+                width: 350px;
+            }
+            h2.tituloNovedades{
+                color: white;
+                text-align: center;
+            }
+        }
+    }
 
-    #logocronoz{
-        width: 80px;
-        margin-top: 1px;
-        margin-left: 5px;
-        
+    div.Categorias{
+        grid-template-columns: repeat(1,1fr);
+        img.ImgCategorias{
+            width: 300px;
+        }
+        h2.CategoriaRedirec2{
+            font-size: $tamanio*3.7;
+            
+            
+        }
     }
-    header{
-        height: 105px;
+    section.ProductoRedirec{
+        a.TextRedirec1{
+            width: 100%;
+            font-size: 22px;
+            margin: 0 auto;
+        }
     }
-    ul.NavegacionNav{
-        display: none;
+    section.Final{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: 0 auto; 
+        
+        width: 100%;
+        text-align: center;
+        div.final1{
+        padding: 5px;
+        img.ImgResumen{
+            width: 150px;
+            padding: 25px;
+        }
+            p.textfinal1{
+                font-weight: 500;
+                font-size: 20px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            }
     }
-    .navegacionSuperior label{
-        display: inline-block;
-        position: relative;
-        left: 300px;
-        top: -180px;
+    }
+
+    /* Nosotros */
+    .container-nosotros{
+        width: 98%;
+        margin: 0 auto;
+        grid-template-columns: repeat(1,1fr);
+
+    section.text_nosotros{
         
-        
+        width: 95%;
+        font-size: 15px;
+        padding: 10px;
+        h1.title_nosotros{
+            font-size: $tamanio*3.5;
+            margin: 0px 0px 20px;
+        }
+        }
+    img.img_nosotros{
+            display: none;  
+        }
+    }
+    /* proyectos a medida */
+    p.text-medida{
+        font-size: 20px;
+        width: $ancho;
+        padding: 30px;
+        margin-top: 10px;
     }
     
-    .navegacionSuperior label i{
-        font-size: 50px;
-    }
-    .navegacionSuperior #check_menu:checked~ .NavegacionNav {
-        /* display: block; */
-        background-color: rgba(10, 1, 1, 0.76);
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        left: 110px;
-        top: 75px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        font-size: 30px;
-        gap: 15px;
-        z-index: 9999;
-        border-radius: 10px;
-        
-    }
-    li.NavegacionIteam{
-        border: 0px solid black;
-        padding: 5px;
-        background-color: rgba(238, 237, 237, 0.705);
-        margin-left: 15px;
-        margin-top: 10px;
-        text-align: center;
-        border-radius: 5px;
-        border-bottom: px solid black;  
-        
-    }
+    ol.pasos-seguir{
+        width: 80%;
+        margin: 0 auto;
+        font-size: 19px;
+        }
+/* productos */
         .grid1{
             grid-template-columns: 1fr;
             grid-template-rows: 500px;
@@ -381,33 +572,20 @@
             text-align: center;
             background-color: white;
         }
-        #logocronoz2{
-            border-radius: 100px; 
-            width: 150px;
-            position: relative;
-            top: 35px;
-            left: 155px;
-            }
-            .RedesSociales form{
-                font-size: 15px;
-            }
             /* pagina de contacto */
         .contacto-info{
-            display: grid;
-            grid-template-columns: 1300px;
-            grid-template-rows: 400px;
-            margin: 0 auto;
-        }
+        
         div.contacto-section{
             margin: 0 auto;
             width: 100%;
             text-align: start;
+            text-align: center;
         }
         div.contacto-section img.img-contacto{
             width: 13px; 
         }
         div.google-maps{
-            width: 150px;
+            width: 100%;
             margin: 0 auto;
         }
         h2.google-text{
@@ -416,61 +594,241 @@
                 margin: 0 auto;
             }
             div.google-maps iframe{ width: 350px;}
-
+        }
 /* Pagina proyectos a medida */
-ol.pasos-seguir{
-    width: 400px;
-    height: 800px;
-    ;
-}
+
+
     }
     @media (max-width:320px){
-        header{
-            width: 140%;
-        }
-        .grid1{
-            width: 100%;
-            grid-template-columns: 1fr;
-            grid-template-rows: 500px;
-            margin: 0 auto;
-            margin-left: 70px;
-        } 
-        section.proximamenteVideo{
-            display: none;
-        }
-        
-        #Living{
-            width: 100%;
-            font-size: 40px;
-            margin: 0 auto;
-            margin-left: 55px;
-        }
-            
-            #ComedorCocina{
-            font-size: 40px;
-    
-        }
-            #Otros{
-            font-size: 40px;  
-            width: 100%;
-            margin-left: 55px;
-        }
-        h1.titulo_categorias {
-            padding: 0px;
-            margin-left: 75px;    
-        }
-        footer{
-            margin: 0px 0px 50px 0px;
-            gap: 10px;
-            display: grid;
-            grid-template-columns: 450px;
-            grid-template-rows: 200px;
-            font-size: 14px;
-            /* background-color: rgb(255, 0, 0); */
-            width: 480px;
+/* index */
+div.bloque-bienvenida{
+    grid-template-columns: 1fr;
+    section.marketing1{
+        text-align: center;
+        font-size: $tamanio*0.9;
+        margin: 10px;
+        width: 95%;
+        h1{
+            font-size: $tamanio*2.5;
         }
     }
+    div.contenedorNovedades{
+        width:85%;
+        margin: 0 auto;
+        .NovedadesIMG{
+            width: 350px;
+        }
+        h2.tituloNovedades{
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+
+div.Categorias{
+    gap: 10px;
+    grid-template-columns: repeat(1,1fr);
+    img.ImgCategorias{
+        width: 280px;
+        margin: 0 auto;
+        
+    }
+    h2.CategoriaRedirec2{
+        font-size: $tamanio*3.7;
+        
+        
+    }
+}
+section.ProductoRedirec{
+    a.TextRedirec1{
+        width: 100%;
+        font-size: 22px;
+        margin: 0 auto;
+    }
+}
+
+div.DestacadosTodo{
+    text-align: center;
+    font-weight: 600; 
+    margin: 0 auto;
+    width: 100%;
+    font-size: 12px;
+    section.Destacados{
+        margin: 0 auto;
+        padding: 5px;
+        font-size: $tamanio*1;
+        text-align: center;
+    }
+    div.ProductoDestacado{
+        width: 95%;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        display: inline-block;
+        opacity: .95;
+        height: 450px;
+        &:hover{
+            opacity: 1;
+        }
+        img.ImgDestacados{
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+            margin: 10px 10px 1px  1px;
+            display: inline-block;
+            border: 3px solid black;
+            
+        }
+        h3{
+            font-size: 24px;
+        }
+    }
+
+
+}
+section.Final{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 0 auto; 
     
+    width: 100%;
+    text-align: center;
+    div.final1{
+    padding: 5px;
+    img.ImgResumen{
+        width: 150px;
+        padding: 25px;
+    }
+        p.textfinal1{
+            font-weight: 500;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+}
+}
+
+/* Nosotros */
+.container-nosotros{
+    width: 98%;
+    margin: 0 auto;
+    grid-template-columns: repeat(1,1fr);
+
+section.text_nosotros{
+    
+    width: 95%;
+    font-size: 14px;
+    padding: 10px;
+    h1.title_nosotros{
+        font-size: $tamanio*2.5;
+        margin: 0px 0px 20px;
+    }
+    }
+img.img_nosotros{
+        display: none;  
+    }
+}
+/* proyectos a medida */
+h1.title_medida{
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+}
+p.text-medida{
+    font-size: 18px;
+    width: $ancho;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+ol.pasos-seguir{
+    width: 95%;
+    margin: 0 auto;
+    font-size: 16px;
+    }
+/* productos */
+    .grid1{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 400px;
+        width: 100%;
+        margin: 0 auto;
+    .ProductoDestacado{
+        text-align: center;
+        margin: 0 auto;
+        margin-left: -15px;
+        img.tamanoAdaptado{
+            width: 280px;
+            height: 280px;
+        }
+    }
+    } 
+
+    section.proximamenteVideo{
+        display: none;
+    }
+    
+        #Living{
+            font-size: 40px;
+            
+            
+    }
+        
+        #ComedorCocina{
+        font-size: 28px;
+        
+
+    }
+        #Otros{
+        font-size: 40px;
+
+    }
+    h1.titulo_categorias {
+        margin-left: 0px;
+    }
+    footer{
+        margin: 0px 0px 60px 0px;
+        /* text-align: center; */
+        width: 100%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+        text-align: center;
+        background-color: white;
+    }
+        /* pagina de contacto */
+        .contacto-info{
+            
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+            margin-left: -8px;
+        div.contacto-section{
+                width: 90%;
+                text-align: center;
+                font-size: 15px;
+                margin: 0 auto;
+            }
+        div.contacto-section img.img-contacto{
+                width: 13px; 
+            }
+        div.google-maps{
+                width: 95%;
+                margin: 0 auto;
+            h2.google-text{
+            
+                    font-size: 24px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            iframe{ 
+                    margin: 0 auto;
+                    width: 240px;
+                height: 300px;}
+                }
+            }
+/* Pagina proyectos a medida */
+
+
+}
     
     @media (min-width:1600px){
         .RedesSociales form{
