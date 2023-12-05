@@ -65,7 +65,7 @@
     /* contacto */
 }
 }
-    @media (max-width:1200px){
+@media (max-width:1200px){
     /* index */
     div.bloque-bienvenida{
         section.marketing1{
@@ -157,7 +157,7 @@ div.contenedorNovedades{
     }
     }
     
-    @media (max-width:1024px){
+@media (max-width:1024px){
         
         
         /* index */
@@ -174,6 +174,12 @@ div.contenedorNovedades{
         div.Categorias{
             img.ImgCategorias{
                 width: 300px;
+            }
+            .categoria1{
+                .CategoriaRedirec2{
+                    font-size: 67px;
+                    margin-left: 10px;
+                }
             }
         }
         section.Final{
@@ -269,7 +275,7 @@ div.contenedorNovedades{
     }
     }
     
-    @media (max-width:768px ){
+@media (max-width:768px ){
     
     #logocronoz{
         border-radius: 100px;   
@@ -399,10 +405,11 @@ div.contenedorNovedades{
     }
     /* contacto */
     .contacto-info{
+        margin: 0 auto;
         grid-template-columns: 1fr;
     div.contacto-section{
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
         text-align: center;
         font-size: 22px;
     }
@@ -437,7 +444,7 @@ div.contenedorNovedades{
     }
     }
     
-    @media (max-width:480px){
+@media (max-width:480px){
     /* index */
     div.bloque-bienvenida{
         grid-template-columns: 1fr;
@@ -571,6 +578,11 @@ div.contenedorNovedades{
             grid-template-rows: repeat(5,1fr);
             text-align: center;
             background-color: white;
+            margin: 0 auto;
+            .NavegacionFooter{
+                font-size: 14px;
+                
+            }
         }
             /* pagina de contacto */
         .contacto-info{
@@ -599,7 +611,7 @@ div.contenedorNovedades{
 
 
     }
-    @media (max-width:320px){
+@media (max-width:375px){
 /* index */
 div.bloque-bienvenida{
     grid-template-columns: 1fr;
@@ -634,12 +646,283 @@ div.Categorias{
         margin: 0 auto;
         
     }
+    .categoria1{
+        .CategoriaRedirec2{
+            font-size: 60px;
+            margin-left: -7px;
+            width: 104%;
+        }
+    }
     h2.CategoriaRedirec2{
         font-size: $tamanio*3.7;
-        
-        
+    }
+
+}
+
+section.ProductoRedirec{
+    a.TextRedirec1{
+        width: 100%;
+        font-size: 22px;
+        margin: 0 auto;
     }
 }
+
+div.DestacadosTodo{
+    text-align: center;
+    font-weight: 600; 
+    margin: 0 auto;
+    width: 100%;
+    font-size: 12px;
+    section.Destacados{
+        margin: 0 auto;
+        padding: 5px;
+        font-size: $tamanio*1;
+        text-align: center;
+    }
+    div.ProductoDestacado{
+        width: 95%;
+        background-color: rgb(32, 32, 32);
+        color: white;
+        display: inline-block;
+        opacity: .95;
+        height: 450px;
+        &:hover{
+            opacity: 1;
+        }
+        img.ImgDestacados{
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+            margin: 10px 10px 1px  1px;
+            display: inline-block;
+            border: 3px solid black;
+            
+        }
+        h3{
+            font-size: 24px;
+        }
+    }
+
+
+}
+section.Final{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin: 0 auto; 
+    
+    width: 100%;
+    text-align: center;
+    div.final1{
+    padding: 5px;
+    img.ImgResumen{
+        width: 150px;
+        padding: 25px;
+    }
+        p.textfinal1{
+            font-weight: 500;
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+}
+}
+
+/* Nosotros */
+.container-nosotros{
+    width: 98%;
+    margin: 0 auto;
+    grid-template-columns: repeat(1,1fr);
+
+section.text_nosotros{
+    
+    width: 95%;
+    font-size: 14px;
+    padding: 10px;
+    h1.title_nosotros{
+        font-size: $tamanio*2.5;
+        margin: 0px 0px 20px;
+    }
+    }
+img.img_nosotros{
+        display: none;  
+    }
+}
+/* proyectos a medida */
+h1.title_medida{
+    font-size: 45px;
+    text-align: center;
+    margin-top: 50px;
+}
+p.text-medida{
+    font-size: 18px;
+    width: $ancho;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+ol.pasos-seguir{
+    width: 95%;
+    margin: 0 auto;
+    font-size: 16px;
+    }
+/* productos */
+    .grid1{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 400px;
+        width: 100%;
+        margin: 0 auto;
+    .ProductoDestacado{
+        text-align: center;
+        margin: 0 auto;
+        margin-left: -15px;
+        img.tamanoAdaptado{
+            width: 280px;
+            height: 280px;
+        }
+    }
+    } 
+
+    section.proximamenteVideo{
+        display: none;
+    }
+    
+        #Living{
+            font-size: 40px;
+            
+            
+    }
+        
+        #ComedorCocina{
+        font-size: 28px;
+        
+
+    }
+        #Otros{
+        font-size: 40px;
+
+    }
+    h1.titulo_categorias {
+        margin-left: 0px;
+    }
+    footer{
+        margin: 0px 0px 60px 0px;
+        /* text-align: center; */
+        width: 100%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+        text-align: center;
+        background-color: white;
+    }
+        /* pagina de contacto */
+        .contacto-info{
+            
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+            margin-left: -8px;
+        div.contacto-section{
+                width: 90%;
+                text-align: center;
+                font-size: 15px;
+                margin: 0 auto;
+            }
+        div.contacto-section img.img-contacto{
+                width: 13px; 
+            }
+        div.google-maps{
+                width: 95%;
+                margin: 0 auto;
+            h2.google-text{
+            
+                    font-size: 24px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            iframe{ 
+                    margin: 0 auto;
+                    width: 240px;
+                height: 300px;}
+                }
+            }
+
+/* pagina de contacto */
+        .contacto-info{
+            margin: 0 auto;
+            div.contacto-section{
+            
+                width: 80%;
+                text-align: center;
+                margin: 0 auto;
+                
+                
+            }
+            div.contacto-section img.img-contacto{
+                width: 13px; 
+            }
+            div.google-maps{
+                width: 100%;
+                margin: 0 auto;
+                
+            }
+            h2.google-text{
+                    font-size: 30px;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+                div.google-maps iframe{ width: 250px;}
+            }
+/* Pagina proyectos a medida */
+
+
+}
+@media (max-width:320px){
+/* index */
+div.bloque-bienvenida{
+    grid-template-columns: 1fr;
+    section.marketing1{
+        text-align: center;
+        font-size: $tamanio*0.9;
+        margin: 10px;
+        width: 95%;
+        h1{
+            font-size: $tamanio*2.5;
+        }
+    }
+    div.contenedorNovedades{
+        width:85%;
+        margin: 0 auto;
+        .NovedadesIMG{
+            width: 350px;
+        }
+        h2.tituloNovedades{
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+}
+
+div.Categorias{
+    gap: 10px;
+    grid-template-columns: repeat(1,1fr);
+    img.ImgCategorias{
+        width: 280px;
+        margin: 0 auto;
+        
+    }
+    .categoria1{
+        .CategoriaRedirec2{
+            font-size: 60px;
+            margin-left: -7px;
+            width: 104%;
+        }
+    }
+    h2.CategoriaRedirec2{
+        font-size: $tamanio*3.7;
+    }
+
+}
+
 section.ProductoRedirec{
     a.TextRedirec1{
         width: 100%;
@@ -830,7 +1113,7 @@ ol.pasos-seguir{
 
 }
     
-    @media (min-width:1600px){
+@media (min-width:1600px){
         .RedesSociales form{
             font-size: 15px;
         }

@@ -18,18 +18,18 @@
 <body>
     <!--Seccion logo y navegacion-->
     <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img id="logocronoz" src="./img/logocronoz.png"  alt="imagen de logo Cronoz" title="Logo Cronoz"> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav nav-perso">
-                <li class="nav-item">
+        <ul class="navbar-nav">
+                <li class="nav-item   nav-perso">
                 <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown  nav-perso">
                     <a class="nav-link dropdown-toggle" href="./productos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Productos
                     </a>
@@ -39,13 +39,13 @@
                         <li><a class="dropdown-item" href="./productos.html#Otros">Otros</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item   nav-perso">
                 <a class="nav-link" href="./proyectosamedida.html">Proyectos a medida</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item   nav-perso">
                 <a class="nav-link" href="./nosotros.html">Nosotros</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item   nav-perso">
                     <a class="nav-link" href="./contacto.html">Contacto</a>
                     </li>
             
@@ -198,9 +198,9 @@
 <!--Esta etiquetea footer es para poner pie, datos de contacto y link para volver al inicio-->
 
 <footer>
-    <section class="NavegacionFooter">
+    <section>
         <h3>Navegacion</h3>
-            <ul class="sinPunto">
+            <ul class="sinPunto NavegacionFooter">
             <li><a href="#logocronoz">Inicio</a></li>
             <li><a href="./productos.html">Productos</a></li>
             <li><a href="./nosotros.html">Nosotros</a></li>
@@ -250,7 +250,7 @@
 </footer>
 
 <!-- Bootstrap js -->
-<script src="./js/bootstrap.js"></script>
+<!-- <script src="./js/bootstrap.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
