@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/logocronoz.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/animaciones.css">
+    <!-- librerias -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="../js/script.js" defer></script>
+    <script src="../js/productos.js" defer></script>
+
     <meta name="description" content="Compra los mejores muebles industriles de Cronoz desde tu casa. Tenemos 
     escritorios, muebles tv y más. Hacé tu pedido y pagalo online. ">
     <meta name="keywords" content="HTML, ASP ,JS, META, MUEBLES, INDUSTRIAL, CARPINTERIA, ESCRITORIO, RACKTV, MESA,
     CASA, DECORACION, MINIMALISTA, ENVIO">
     <title>Cronoz muebles-Productos</title>
 </head>
+
+
+
+
 <body>
     <!--Aca iria la barrita de busqueda-->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"><img id="logocronoz" src="../img/logocronoz.png"  alt="imagen de logo Cronoz" title="Logo Cronoz"> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,149 +63,42 @@
             </ul>
             </div>
             </div>
-        </nav>
-        </header>
+    </nav>
+    
+    <!-- boton para ordenar -->
+    <div class="col-md-1">
+        <button id="btnOrder" type="button" class="btn btn-primary">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPpJREFUSEvtkzFqQlEQRe+VN38HEbOCQFxDuhRWli5BXEKKtGkMWNqEkDp9IIK9YC02bkHMAv48uKJgod/whf++la+euWfevTNEzY816+MGKHW4YJGke7j/gnyh2aRUoaSgCIixB2kAYHgAyF2Xgmh2pHk2ZOX5F8jv+gDSA4A1yb9LJ/+v7vprKvdnAK8A3mg2Tf6DPYBsQerSrLcDJA1Z7k8ARgihQ3KTHhDjGNIjpBWzrJ/coqqCp/3nLrmNGO8QwuJgURVoEeD+DqkJYM4sGyfPYC+Y558glzQbJQfI/QfSGo3GjCF8VLFn13v9S646cekW3QCnDmwBYb9kGXeOgS0AAAAASUVORK5CYII="/>
+
+        </button>
+    </div>
+    <!-- carrito -->
+    <button id="btnModalCarrito" type="button"  class="btn btn-primary btn-perso">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAzhJREFUWEftlzmIFEEUhv+/maoSAw0EWVdBVFA8Ig0UA1kPxCtQUVzRzMADTAQTV7xAAxEEA4/ERLwQFMETZV0Q8UDNFg0WUVAU1MREu2p2nnZvzW7P7Mx2TzviIlY2dL3/ffW/96p7iGG2OMx48B8orSIVDkkYHugPCILvEOmEUs9JSppQs55XAllbK/EFar2pWQnTdLIAASKbacz5NLFmPK9fMmAOyFU+yTNqPTctoTjXhlKpLd4XBF1Uqistpvp53SkTkRY49yGS9kFzqPXLoRLEPUjuj/eIHKQxAz2ZkWzIsZcwvAJyndc6S623/F2gqAQiDzxECKXGkvxWD+qPOxQ7H4bdIGd4iF3U+vjfBbJ2O4CTvi96oPXU8r0k1vYmeiytS3qpdSFtU+qrQ0RGwrmPAEbFYuRSKnUvdi8n0C/X1wOY6afxUVkvlk8j9olPANjpXbpOY1bnBRIRBec+AxjtD7gweT1kAxKZAud6PHwJSo0n+an6MFmaWsJwA8hL/nBvacykpE4mIO/GfQCLvdBhGrM3J9DdqOzenQ4qdSQfULG4BqXSVR/8FUq1kCwmxdIcEpFWOPfet0rk9ASSUX/2r+wOiQSw9gPIFu/SRhrTZ71fqUDO7YdI3+0tcpPGlF9NjQPFGs7tgchhH/2QWi+oABriXSYihLXvQbbGMUGwloXCteqyZ3ao71AyBs5Fzdx3n4jMojHd1aK1fotzSyASXxcAvkCpVpLut4BiBmvPAdjshU5R6x2ZgKy9CKDdH+QYjdldK64hhzxQ9BnyxItFX5VHswCB7Oh3VqnpJF83BchDvQAwOxPI4E2PqfX8erENOxQDhWE7yKgEjS+RQdOZFMkF5KE2ApjWINErGnN5qJjcQA2CZN6eC0hENJw7DSC62N4gCA6xULhVc9yLxRUolfYBmAzgBpTaRtI2t4ecWwaR2wnRp9R6Xk0ga6OJHPiDQC6nUneaC2Rt5M7WhGhIrUfUAfoBwCSenaHW25oLJDLO/yMpl7xuEqmEF39DD/p0KQPm6qF4ykQmwrmVIN+gUOis1xdxvxWLiyAyGUrdJPnu35+yzDOcY2PukuXIlSlk2AH9BGB6cDQCVVmuAAAAAElFTkSuQmCC" />
+        <span id="cartCount" class="badge text-bg-secondary btn-conteo">0</span> 
+    </button>
+    
+    
+
+</header>
+
+
+
     <!--inicio categorias-->
-    <h1 class="titulo_categorias" id="top-cat">CATEGORIAS</h1>
-    <ul class="ProductoDestacado ">
-        <li id="Living" >Living</li>
-            <section class="grid1">
-            <div class="ProductoDestacado">   
-                <img class="tamanoAdaptado" src="../img/bajotvrack.jpg" title="Rack bajo TV" alt="Imagen rack para bajo tv">
-                <h3>Rack bajo TV</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/biblioteca-5estantes.jpg" title="Biblioteca" alt="Imagen Biblioteca"> 
-                <h3>Biblioteca</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/mesaratonera.jpg" title="Mesa ratonera" alt="Imagen de mesa retonera">
-                <h3>Mesa ratonera</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/perchero-industrial.png" title="Perchero industrial" alt="Imagen perchero recibidor">
-                <h3>Perchero recibidor</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
+    <div class="col-md-3 barraBusq">
+        <input id="inputSearch" type="search" class="form-control" placeholder="Que producto desea buscar?...">
+    </div>
 
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" id="rack" src="../img/rack.jpg" title="Rack" alt="Imagen rack">
-                <h3>Rack TV</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/rack3cajones.jpg" title="Rack 3 cajones" alt="Imagen rack con 3 cajones">
-                <h3>Rack bajo TV con cajones</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/rackratonera.png" title="Rack+ Ratonera" alt="Imagen rack+ratonera">
-                <h3>Combo Rack TV + Ratonera</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-        </section>
-<!--Fin categoria Living-->
-
-        <li id="ComedorCocina">Comedor/Cocina</li>
-        <section class="grid1">
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/biblioteca-5estantes.jpg" title="Alacena" alt="Imagen Alacena"> 
-                <h3>Alacena</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
+    <h1 class="titulo_categorias" id="top-cat">Cronoz- Muebles industriales</h1>
 
 
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/combo-desayunador-4sillas.jpg" title="Desayunador" alt="Imagen desayunador+4sillas">
-                <h3>Combo desayunador + 4 sillas</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" id="mesasilla"src="../img/combo-comedor4sillas.jpg" title="Mesa comedor" alt="Imagen combo mesa+4 sillas">
-                <h3>Combo mesa +  4 sillas</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-                
-                
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/mesa-comedor-industrial.jpg" title="Mesa comedor" alt="Imagen de mesa para comedor">
-                <h3>Mesa comedor industrial</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/mesa-estilo-industrial.jpg" title="Mesa industrial" alt="Imagen de mesa para comedor industrial">
-                <h3>Mesa comedor estilo industrial</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/silla modelo barra.jpg" title="Silla industrial" alt="Imagen silla industrial">
-                <h3>Silla industrial pack 4</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            </section>
-<!--Fin categoria Comedor/Cocina-->
-        <li id="Otros">Otros</li>
-            <section class="grid1">
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" id="escritorio" src="../img/escritorio3cajones.jpg" title="Escritorio" alt="Imagen de escritorio con 3 cajones">
-                <h3>Escritorio con 3 cajones</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/mesaluzz.jpg" title="Mesa luz"  alt="Imagen de mesa de luz con cajon">
-                <h3>Mesa de luz con cajon</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/mesaoluz.png" title="Mesa de luz" alt="Imagen de mesa de luz">
-                <h3>Mesa de luz</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            
-            <div class="ProductoDestacado">
-                <img class="tamanoAdaptado" src="../img/respaldocama.jpg" title="Respaldar de cama" alt="Imagen de respaldar para cama 2 plazas">
-                <h3>Respadar para cama 2 plazas</h3>
-                <p>Precio: $</p>
-                <button>Agregar al carrito</button>
-            </div>
-            </section>
-<!--Fin categoria otros-->
-    </ul>
+<!--Los productos estan desde JS en este contenedor de Producto destacado.-->
+
+<div class="ProductoDestacado grid1 ">
+</div>
+
+<!-- Fin seccion de productos. -->
+
     <section class="proximamenteVideo">
         <!--Video de proximamente-->
         <h2>Proximamente!</h2>
@@ -206,8 +111,46 @@
         </div>
     </section>
 
-    
-    
+
+<!-- Modal del carrito, esta debajo del index se activa con el click en el carrito -->
+
+
+<div id="modalCarrito" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Carrito </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="modalListProducts">
+
+                    </tbody>
+                
+                </table>
+                <hr>
+                <p class="text-danger"> Total $ <span id="cartSum"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCerrar" type="button" class="btn btn-secondary">Cerrar</button>
+                <button id="btnComprar"  type="submit" class="btn btn-primary">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <!--Footer igual a todas los html de este sitio-->
 <footer>
     <section class="NavegacionFooter">

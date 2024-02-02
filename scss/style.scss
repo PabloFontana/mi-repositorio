@@ -32,7 +32,7 @@ body{
 
 header{
     top: 0;
-    z-index: 99999;
+    z-index: 1;
     position: sticky;
     #logocronoz{
         border-radius: 100px;   
@@ -42,8 +42,23 @@ header{
         font-size: 20px;
     }
 }
+#btnModalCarrito{
+    background-color: rgba(0, 0, 0, 0.808);
+    border: 1px blanchedalmond;
+    position: absolute;
+    right: 110px;
+    top: 50px;
+}
+#btnOrder{
+    background-color: rgba(0, 0, 0, 0.808);
+    border: 1px blanchedalmond;
+    position: absolute;
+    right: 220px;
+    top: 55px;
+}
 
 ul li a {
+    
     text-decoration: none; /* Elimina la línea de subrayado de todas las listas no solo header */
     color: black;
 }
@@ -80,6 +95,7 @@ h1{
 
 /* Seccion de index. */
 div.bloque-bienvenida{
+    
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 1fr;
@@ -361,6 +377,12 @@ footer{
 tienen aplicado el mismo CSS class que las imagenes del index
 que se encuentran en la seccion destacados. ProdcutosDestacados 
 y imgDestacados */
+
+.barraBusq{
+    position: relative;
+    top: 20px;
+    left: 1300px;
+}
 ul.ProductoDestacado{
     top: -50px;
     list-style-type: none;
@@ -408,8 +430,23 @@ h1.titulo_categorias {
     /* margin-left: 200px; */
     margin: 0 auto;
     margin-bottom: 150px;
+    text-align: center;
+    gap: 5px;
 
 } 
+.btnproductos{
+    width: 120px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+    font-family: $fuente-primaria;
+}
+.precioProducto{
+    font-size: 18px;
+    font-weight: 500
+
+}
 section.proximamenteVideo{
     width: 270px;
     height: 500px;
