@@ -15,9 +15,35 @@ btnCerrar.addEventListener('click', ()=>{
     modal.hide();
 })
 
+
+inputSearch.addEventListener('input', (event)=>{
+    const busqueda = event.target.value ;
+    const ArrayBusqueda = listaProd.filter(( producto)=> producto.nombreProd.toLowerCase().includes( busqueda.toLowerCase()) );
+    renderProductos(ArrayBusqueda)
+
+}) 
+//boton para ordenar por precio
+
+
+btnOrder.addEventListener('click', () => {
+    console.log('Ordenando');
+    listaProd.sort( (a,b)=>{
+        if( a.precio < b.precio){
+            return -1
+        }
+        if( a.precio > b.precio ){
+            return 1
+        }
+        return 0
+    })
+    renderProductos(listaProd)
+    //desaibilita la opcion de volver a precionar el boton, falta agregar un boton para ordenar de mayor a menor.
+    btnOrder.setAttribute('disabled', true)
+})
+
+
 /* Mando list productos y los retorna renderizados. */
 //producto destado viene desde el html de las carts de prodcutos, acordate de cambiar la clase para que sea mas entendible todo
-
 const renderProductos = (lista)=> {
 
 ProductoDestacado.innerHTML = '' ;
@@ -42,8 +68,10 @@ btns.forEach(btn =>{
 
 }
 
+
 const addACarrito = ( e ) =>{
     const id = e.target.id ; 
+    //obtengo el producto
     const product= listaProd.find( item => item.id == id );
     console.table(product);
 
