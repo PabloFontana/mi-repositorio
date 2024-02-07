@@ -1,13 +1,27 @@
 const modal = new bootstrap.Modal('#modalCarrito', {});
 const btnModalCarrito = document.querySelector('#btnModalCarrito');
 const cartCount = document.querySelector('#cartCount');
+const CarritoTotal = document.querySelector('#CarritoTotal')
 const ProductoDestacado = document.querySelector('.ProductoDestacado');
 const modalListProducts = document.querySelector('#modalListProducts');
 const btnCerrar = document.querySelector('#btnCerrar');
 const btnComprar = document.querySelector('#btnComprar');
 const btnOrder = document.querySelector('#btnOrder')
 const inputSearch = document.querySelector('#inputSearch')
+
+//No puedo hacer el local storage me devuelva el carrito que si queda guardado. no encuentro el error para saber porque no queda cargado al actualizar..
+const listaDelCarrito = JSON.parse( localStorage.getItem('carro') ) || [];
+const carrito = new carro();
+
+cartCount.innerText = carrito.getCantidad();
+
+
 btnModalCarrito.addEventListener('click', function(){
+    
+    const listaCarrito = carrito.getProductos();
+    renderCarrito(listaCarrito);
+
+    CarritoTotal.innerText = carrito.getSumaCarro(); 
     modal.show();
 })
 
@@ -74,8 +88,30 @@ const addACarrito = ( e ) =>{
     //obtengo el producto
     const product= listaProd.find( item => item.id == id );
     console.table(product);
+    carrito.addCarro( product);
+    cartCount.innerText = carrito.getCantidad() ;
+}
+
+
+const renderCarrito = (listaCarrito ) => {
+    modalListProducts.innerHTML ='';
+    
+    listaCarrito.forEach( prodCarrito =>{
+        modalListProducts.innerHTML +=//html
+        `<tr>
+            <td> ${prodCarrito.nombreProd} </td>
+            <td> ${prodCarrito.cantidad} </td>
+            <td> $${prodCarrito.precio} </td>
+            <td> $  ${prodCarrito.precio * prodCarrito.cantidad} </td>
+            
+        </tr>
+        `;
+    }); 
+
 
 }
+
+
 
 renderProductos(listaProd)
 
