@@ -11,7 +11,9 @@ const inputSearch = document.querySelector('#inputSearch')
 
 //No puedo hacer el local storage me devuelva el carrito que si queda guardado. no encuentro el error para saber porque no queda cargado al actualizar..
 const listaDelCarrito = JSON.parse( localStorage.getItem('carro') ) || [];
-const carrito = new carro();
+const carrito = new carro(listaDelCarrito);
+
+
 
 cartCount.innerText = carrito.getCantidad();
 
@@ -111,9 +113,28 @@ const renderCarrito = (listaCarrito ) => {
 
 }
 
+//leyendo json local.
+const getProductos = async () => {
+
+    try{
+        const endPoint = '../data.json';
+        const respuesta = await fetch (endPoint)
+        const json = await respuesta.json();
+        const {listaProd}  = json;
+        console.table(listaProd)
+        renderProductos(listaProd);
+    
+        console.log(json);
+    } catch (error){
+        //agregar mensaje de error con toasyfi. link antes en html
+    }
+    
 
 
-renderProductos(listaProd)
+}
+
+getProductos();
+
 
 
 

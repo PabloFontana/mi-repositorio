@@ -1,0 +1,29 @@
+{
+    "listaProd": [
+        {"id" : 1 , "nombreProd" : "Rack bajo TV", "img": "../img/bajotvrack.jpg", "precio" : 10000 , "id_categoria" : 1 }, 
+        {"id" : 2 , "nombreProd" : "Biblioteca" ,  "img": "../img/biblioteca-5estantes.jpg",  "precio" : 12000 , "id_categoria" : 1 },
+        {"id" : 3 , "nombreProd" : "Mesa ratonera" ,  "img": "../img/mesaratonera.jpg", "precio" : 5500 , "id_categoria" : 1 }, 
+        {"id" : 4 , "nombreProd" : "Perchero recibidor" , "img": "../img/perchero-industrial.png", "precio" : 7000 , "id_categoria" : 1 }, 
+        {"id" : 5 , "nombreProd" : "Rack TV" ,  "img": "../img/rack.jpg", "precio" : 28000 , "id_categoria" : 1 }, 
+        {"id" : 6 , "nombreProd" : "Rack bajo TV con cajones" ,  "img": "../img/rack3cajones.jpg", "precio" : 14000 , "id_categoria" : 1 }, 
+        {"id" : 7 , "nombreProd" : "Combo Rack TV + Ratonera" ,  "img": "../img/rackratonera.png"," precio" : 22000 , "id_categoria" : 1 }, 
+        
+        {"id" : 8 , "nombreProd" : "Alacena" ,  "img": "../img/biblioteca-5estantes.jpg", "precio" : 12000 , "id_categoria" : 2 },
+        {"id" : 9 , "nombreProd" : "Combo desayunador + 4 sillas" , " img": "../img/combo-desayunador-4sillas.jpg", "precio" : 26000 , "id_categoria" : 2 },
+        {"id" : 10 , "nombreProd" : "Combo mesa + 4 sillas" , "img": "../img/combo-comedor4sillas.jpg",  "precio" : 31000 , "id_categoria" : 2 },
+        {"id" : 11 , "nombreProd" : "Mesa comedor industrial" ,  "img": "../img/mesa-comedor-industrial.jpg", "precio" : 14000 , "id_categoria" : 2 },
+        {"id" : 12 , "nombreProd" : "Mesa comedor estilo industrial" , "img": "../img/mesa-estilo-industrial.jpg","precio" : 18000 , "id_categoria" : 2 },
+        {"id" : 13 , "nombreProd" : "Silla industrial pack 4" ,  "img": "../img/silla modelo barra.jpg" , "precio" : 3500 , "id_categoria" : 2 },
+        
+        {"id" : 14 , "nombreProd" : "Escritorio con 3 cajones" , "img": "../img/escritorio3cajones.jpg",  "precio" : 20000 , "id_categoria" : 3 },
+        {"id" : 15 , "nombreProd" : "Mesa de luz con cajon" ,  "img": "../img/mesaluzz.jpg", "precio" : 5000 , "id_categoria" : 3 },
+        {"id" : 16 , "nombreProd" : "Mesa de luz" , "img": "../img/mesaoluz.png", "precio" : 6000 , "id_categoria" : 3 },
+        {"id" : 17 , "nombreProd" : "Respadar para cama 2 plazas" , "img": "../img/respaldocama.jpg" , "precio" : 7000 , "id_categoria" : 3 }
+        ],
+    "categoria" : [
+        { "id_categoria" : 1 , "name" : "living"},
+        { "id_categoria" : 2 , "name" : "comedorCocina"},
+        { "id_categoria" : 3 , "name" : "otros"}
+    ]
+
+}
