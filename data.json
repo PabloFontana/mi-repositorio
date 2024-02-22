@@ -6,10 +6,10 @@
         {"id" : 4 , "nombreProd" : "Perchero recibidor" , "img": "../img/perchero-industrial.png", "precio" : 7000 , "id_categoria" : 1 }, 
         {"id" : 5 , "nombreProd" : "Rack TV" ,  "img": "../img/rack.jpg", "precio" : 28000 , "id_categoria" : 1 }, 
         {"id" : 6 , "nombreProd" : "Rack bajo TV con cajones" ,  "img": "../img/rack3cajones.jpg", "precio" : 14000 , "id_categoria" : 1 }, 
-        {"id" : 7 , "nombreProd" : "Combo Rack TV + Ratonera" ,  "img": "../img/rackratonera.png"," precio" : 22000 , "id_categoria" : 1 }, 
+        {"id" : 7 , "nombreProd" : "Combo Rack TV + Ratonera" ,  "img": "../img/rackratonera.png","precio" : 22000 , "id_categoria" : 1 }, 
         
         {"id" : 8 , "nombreProd" : "Alacena" ,  "img": "../img/biblioteca-5estantes.jpg", "precio" : 12000 , "id_categoria" : 2 },
-        {"id" : 9 , "nombreProd" : "Combo desayunador + 4 sillas" , " img": "../img/combo-desayunador-4sillas.jpg", "precio" : 26000 , "id_categoria" : 2 },
+        {"id" : 9 , "nombreProd" : "Combo desayunador + 4 sillas" , "img": "../img/desayunador4sillas.jpg", "precio" : 26000 , "id_categoria" : 2 },
         {"id" : 10 , "nombreProd" : "Combo mesa + 4 sillas" , "img": "../img/combo-comedor4sillas.jpg",  "precio" : 31000 , "id_categoria" : 2 },
         {"id" : 11 , "nombreProd" : "Mesa comedor industrial" ,  "img": "../img/mesa-comedor-industrial.jpg", "precio" : 14000 , "id_categoria" : 2 },
         {"id" : 12 , "nombreProd" : "Mesa comedor estilo industrial" , "img": "../img/mesa-estilo-industrial.jpg","precio" : 18000 , "id_categoria" : 2 },
@@ -21,9 +21,11 @@
         {"id" : 17 , "nombreProd" : "Respadar para cama 2 plazas" , "img": "../img/respaldocama.jpg" , "precio" : 7000 , "id_categoria" : 3 }
         ],
     "categoria" : [
-        { "id_categoria" : 1 , "name" : "living"},
-        { "id_categoria" : 2 , "name" : "comedorCocina"},
-        { "id_categoria" : 3 , "name" : "otros"}
+        { "id_categoria" : 1 , "nombreCategoria" : "Living"},
+        { "id_categoria" : 2 , "nombreCategoria" : "Comedor / Cocina"},
+        { "id_categoria" : 3 , "nombreCategoria" : "Otros"},
+        { "id_categoria" : 4 , "nombreCategoria" : "Todos los productos"}
+        
     ]
 
 }

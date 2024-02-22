@@ -8,12 +8,12 @@ const btnCerrar = document.querySelector('#btnCerrar');
 const btnComprar = document.querySelector('#btnComprar');
 const btnOrder = document.querySelector('#btnOrder')
 const inputSearch = document.querySelector('#inputSearch')
-
+const SeleccionCategoria = document.querySelector('#SeleccionCategoria')
 //No puedo hacer el local storage me devuelva el carrito que si queda guardado. no encuentro el error para saber porque no queda cargado al actualizar..
 const listaDelCarrito = JSON.parse( localStorage.getItem('carro') ) || [];
 const carrito = new carro(listaDelCarrito);
 
-
+let lista_Productos = [] ;
 
 cartCount.innerText = carrito.getCantidad();
 
@@ -34,16 +34,35 @@ btnCerrar.addEventListener('click', ()=>{
 
 inputSearch.addEventListener('input', (event)=>{
     const busqueda = event.target.value ;
-    const ArrayBusqueda = listaProd.filter(( producto)=> producto.nombreProd.toLowerCase().includes( busqueda.toLowerCase()) );
+    const ArrayBusqueda = lista_Productos.filter(( producto)=> producto.nombreProd.toLowerCase().includes( busqueda.toLowerCase()) );
     renderProductos(ArrayBusqueda)
 
 }) 
 //boton para ordenar por precio
 
 
+SeleccionCategoria.addEventListener('change' , (e)=>{
+    const id_categoria = SeleccionCategoria.value ;
+
+    console.log('Cambio a  categoria', id_categoria)
+
+    FiltroCategoria (id_categoria)
+});
+
+
+
+const FiltroCategoria = ( id_categoria ) =>{
+    const nuevaLista = lista_Productos.filter ( (producto)=> producto.id_categoria == id_categoria );
+    renderProductos(nuevaLista);
+
+    /* console.table(nuevaLista); */
+
+}
+
+
 btnOrder.addEventListener('click', () => {
     console.log('Ordenando');
-    listaProd.sort( (a,b)=>{
+    lista_Productos.sort( (a,b)=>{
         if( a.precio < b.precio){
             return -1
         }
@@ -52,10 +71,12 @@ btnOrder.addEventListener('click', () => {
         }
         return 0
     })
-    renderProductos(listaProd)
+    renderProductos(lista_Productos)
     //desaibilita la opcion de volver a precionar el boton, falta agregar un boton para ordenar de mayor a menor.
     btnOrder.setAttribute('disabled', true)
 })
+
+
 
 
 /* Mando list productos y los retorna renderizados. */
@@ -75,6 +96,8 @@ lista.forEach( producto => {
         </div>`;
 });
 
+
+
 const btns = document.querySelectorAll(".btnproductos");
 
 btns.forEach(btn =>{
@@ -88,7 +111,7 @@ btns.forEach(btn =>{
 const addACarrito = ( e ) =>{
     const id = e.target.id ; 
     //obtengo el producto
-    const product= listaProd.find( item => item.id == id );
+    const product= lista_Productos.find( item => item.id == id );
     console.table(product);
     carrito.addCarro( product);
     cartCount.innerText = carrito.getCantidad() ;
@@ -109,9 +132,21 @@ const renderCarrito = (listaCarrito ) => {
         </tr>
         `;
     }); 
-
-
 }
+
+const renderCategoria = (listaCarrito ) => {
+    SeleccionCategoria.innerHTML = '' ;
+    listaCarrito.forEach( categoria => {
+        SeleccionCategoria.innerHTML += //html 
+        `<option selected value="${categoria.id_categoria}">${categoria.nombreCategoria}</option>
+        `
+    });
+
+
+} 
+
+
+
 
 //leyendo json local.
 const getProductos = async () => {
@@ -120,13 +155,27 @@ const getProductos = async () => {
         const endPoint = '../data.json';
         const respuesta = await fetch (endPoint)
         const json = await respuesta.json();
-        const {listaProd}  = json;
-        console.table(listaProd)
+
+        
+        const { listaProd , categoria }  = json;
+        lista_Productos = listaProd ; 
+
+
+        console.table(categoria)
         renderProductos(listaProd);
-    
-        console.log(json);
+        renderCategoria(categoria)
+
+
     } catch (error){
-        //agregar mensaje de error con toasyfi. link antes en html
+        Swal.fire({
+            title: "Error",
+            text: 'Tenemos un inconveniente para mostrar los Productos, por favor intente más tarde',
+            icon: "error",
+            confirmButtonText: 'Aceptar'
+        });
+
+        console.log(error)
+    
     }
     
 
