@@ -39,4 +39,6 @@ class carro {
         return SumaCarrito ; 
     }
 
+
+    //anadir boton para eliminar o descontar productos del carrito. Tambien para eliminar todo el carrito
 }

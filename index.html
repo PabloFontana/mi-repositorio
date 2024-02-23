@@ -11,11 +11,12 @@
     <!-- librerias -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
     <!-- js -->
-    <script src="../js/carrito.js" defer></script>
-    <script src="../js/script.js" defer></script>
-    <script src="../js/productos.js" defer></script>
+    <script src="/js/carrito.js" defer></script>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/productos.js" defer></script>
 
     <title>Inicio - Cronoz muebles industriales</title>
     <meta name="description" content="Compra los mejores muebles industriles de Cronoz desde tu casa. Tenemos 
@@ -36,17 +37,10 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
                 <li class="nav-item   nav-perso">
-                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                <a class="nav-link " aria-current="page" href="./index.html">Inicio</a>
                 </li>
-                <li class="nav-item dropdown  nav-perso">
-                    <a class="nav-link dropdown-toggle" href="./pages/productos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Productos
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./pages/productos.html#top-cat">Living</a></li>
-                        <li><a class="dropdown-item" href="./pages/productos.html#ComedorCocina">Cocina/Comedor</a></li>
-                        <li><a class="dropdown-item" href="./pages/productos.html#Otros">Otros</a></li>
-                    </ul>
+                <li class="nav-item nav-perso">
+                    <a class="nav-link" href="./pages/productos.html">Productos</a>
                 </li>
                 <li class="nav-item   nav-perso">
                 <a class="nav-link" href="./pages/proyectosamedida.html">Proyectos a medida</a>
@@ -63,10 +57,11 @@
         </div>
     </nav>
     
-    <button id="btnModalCarrito" type="button" class="btn btn-primary btn-perso">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAzhJREFUWEftlzmIFEEUhv+/maoSAw0EWVdBVFA8Ig0UA1kPxCtQUVzRzMADTAQTV7xAAxEEA4/ERLwQFMETZV0Q8UDNFg0WUVAU1MREu2p2nnZvzW7P7Mx2TzviIlY2dL3/ffW/96p7iGG2OMx48B8orSIVDkkYHugPCILvEOmEUs9JSppQs55XAllbK/EFar2pWQnTdLIAASKbacz5NLFmPK9fMmAOyFU+yTNqPTctoTjXhlKpLd4XBF1Uqistpvp53SkTkRY49yGS9kFzqPXLoRLEPUjuj/eIHKQxAz2ZkWzIsZcwvAJyndc6S623/F2gqAQiDzxECKXGkvxWD+qPOxQ7H4bdIGd4iF3U+vjfBbJ2O4CTvi96oPXU8r0k1vYmeiytS3qpdSFtU+qrQ0RGwrmPAEbFYuRSKnUvdi8n0C/X1wOY6afxUVkvlk8j9olPANjpXbpOY1bnBRIRBec+AxjtD7gweT1kAxKZAud6PHwJSo0n+an6MFmaWsJwA8hL/nBvacykpE4mIO/GfQCLvdBhGrM3J9DdqOzenQ4qdSQfULG4BqXSVR/8FUq1kCwmxdIcEpFWOPfet0rk9ASSUX/2r+wOiQSw9gPIFu/SRhrTZ71fqUDO7YdI3+0tcpPGlF9NjQPFGs7tgchhH/2QWi+oABriXSYihLXvQbbGMUGwloXCteqyZ3ao71AyBs5Fzdx3n4jMojHd1aK1fotzSyASXxcAvkCpVpLut4BiBmvPAdjshU5R6x2ZgKy9CKDdH+QYjdldK64hhzxQ9BnyxItFX5VHswCB7Oh3VqnpJF83BchDvQAwOxPI4E2PqfX8erENOxQDhWE7yKgEjS+RQdOZFMkF5KE2ApjWINErGnN5qJjcQA2CZN6eC0hENJw7DSC62N4gCA6xULhVc9yLxRUolfYBmAzgBpTaRtI2t4ecWwaR2wnRp9R6Xk0ga6OJHPiDQC6nUneaC2Rt5M7WhGhIrUfUAfoBwCSenaHW25oLJDLO/yMpl7xuEqmEF39DD/p0KQPm6qF4ykQmwrmVIN+gUOis1xdxvxWLiyAyGUrdJPnu35+yzDOcY2PukuXIlSlk2AH9BGB6cDQCVVmuAAAAAElFTkSuQmCC"/>
-        <span id="cartCount" class="badge text-bg-secondary btn-conteo">0</span> 
-    </button>
+    <!-- carrito -->
+    <button id="btnModalCarrito" type="button"  class="btn btn-primary btn-perso">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAzhJREFUWEftlzmIFEEUhv+/maoSAw0EWVdBVFA8Ig0UA1kPxCtQUVzRzMADTAQTV7xAAxEEA4/ERLwQFMETZV0Q8UDNFg0WUVAU1MREu2p2nnZvzW7P7Mx2TzviIlY2dL3/ffW/96p7iGG2OMx48B8orSIVDkkYHugPCILvEOmEUs9JSppQs55XAllbK/EFar2pWQnTdLIAASKbacz5NLFmPK9fMmAOyFU+yTNqPTctoTjXhlKpLd4XBF1Uqistpvp53SkTkRY49yGS9kFzqPXLoRLEPUjuj/eIHKQxAz2ZkWzIsZcwvAJyndc6S623/F2gqAQiDzxECKXGkvxWD+qPOxQ7H4bdIGd4iF3U+vjfBbJ2O4CTvi96oPXU8r0k1vYmeiytS3qpdSFtU+qrQ0RGwrmPAEbFYuRSKnUvdi8n0C/X1wOY6afxUVkvlk8j9olPANjpXbpOY1bnBRIRBec+AxjtD7gweT1kAxKZAud6PHwJSo0n+an6MFmaWsJwA8hL/nBvacykpE4mIO/GfQCLvdBhGrM3J9DdqOzenQ4qdSQfULG4BqXSVR/8FUq1kCwmxdIcEpFWOPfet0rk9ASSUX/2r+wOiQSw9gPIFu/SRhrTZ71fqUDO7YdI3+0tcpPGlF9NjQPFGs7tgchhH/2QWi+oABriXSYihLXvQbbGMUGwloXCteqyZ3ao71AyBs5Fzdx3n4jMojHd1aK1fotzSyASXxcAvkCpVpLut4BiBmvPAdjshU5R6x2ZgKy9CKDdH+QYjdldK64hhzxQ9BnyxItFX5VHswCB7Oh3VqnpJF83BchDvQAwOxPI4E2PqfX8erENOxQDhWE7yKgEjS+RQdOZFMkF5KE2ApjWINErGnN5qJjcQA2CZN6eC0hENJw7DSC62N4gCA6xULhVc9yLxRUolfYBmAzgBpTaRtI2t4ecWwaR2wnRp9R6Xk0ga6OJHPiDQC6nUneaC2Rt5M7WhGhIrUfUAfoBwCSenaHW25oLJDLO/yMpl7xuEqmEF39DD/p0KQPm6qF4ykQmwrmVIN+gUOis1xdxvxWLiyAyGUrdJPnu35+yzDOcY2PukuXIlSlk2AH9BGB6cDQCVVmuAAAAAElFTkSuQmCC" />
+    <span id="cartCount" class="badge text-bg-secondary btn-conteo">0</span> 
+</button>
 
     </header>
     
@@ -151,28 +146,36 @@
         <img src="./img/combo-comedor4sillas.jpg" class="ImgDestacados" title="Mesa comedor combo" alt="Imagen de combo comedor mesa mas 4 sillas"> 
             <h3>Combo comedor- Mesa + 4 sillas</h3> 
             <p>Precio: $</p>
-            <button>Agregar al carrito</button>
+            <button class="btnproductos"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcBJREFUSEvNlD+Iz3EYx1/v7vN8BgODcmKQUgajgdsMjBalDErJsSgkGRklkkxXLsVAFouNsgnDTaYzUkiWq1P3/Xy6h+/ld/3ud98/H/2cPOvz9Lye9/NPbLBpg/Pz7wCekv9WswjMyuzC31C3qmAIMMh7RGYvx4Wsa5GndBW4ATyX2dEmwKAYmfW2eD3AfSs5fwEmCGGXpI+jkLEAdTKvqkdIJ4GbMqsVrbHxASlNAa+B74SwU9KSp7QMrVu3LLOJpna29tCr6j3SPqRTCuFhCcBzvof7eeCuzC7WwC7AWaQZ4J3MDgxX19Qidzdy/gZsIYS9kua7Ae6byPkzsJkQ9kuaG0AaATmfwP0x8FZmBwexnWu2Ktn9gWI83QlI6QVwGGlaIdwvA7jvIecPwBIhbJO00HgX7jvI+RPwgxAmJdXfYMV6D8VTegUcAq7I7FbL4V3/td3XcJ9VjGeGY/oBOR/H/WnRy3CfUoxv/gzgHkhpHml3D+SZzI6NxvQqKKq8I6gI4FV1Ceky7rcV4501N9HhKxryym9KqX5+k8BXmW0fObpWXzmgqmaQ6kN6ohjPjSho9RUDxplD0Qz+a8BPRxzKGeZ9QbQAAAAASUVORK5CYII="/>
+                Agregar
+            </button>
     </div>
 
     <div class="ProductoDestacado ProductoDestacado2 card mb-3">
         <img src="./img/escritorio3cajones.jpg" class="ImgDestacados" title="Escritorio" alt="Imagen escritorio con 3 cajones">
             <h3>Escritorio con cajones</h3>
             <p>Precio: $</p>
-            <button>Agregar al carrito</button>
+            <button class="btnproductos"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcBJREFUSEvNlD+Iz3EYx1/v7vN8BgODcmKQUgajgdsMjBalDErJsSgkGRklkkxXLsVAFouNsgnDTaYzUkiWq1P3/Xy6h+/ld/3ud98/H/2cPOvz9Lye9/NPbLBpg/Pz7wCekv9WswjMyuzC31C3qmAIMMh7RGYvx4Wsa5GndBW4ATyX2dEmwKAYmfW2eD3AfSs5fwEmCGGXpI+jkLEAdTKvqkdIJ4GbMqsVrbHxASlNAa+B74SwU9KSp7QMrVu3LLOJpna29tCr6j3SPqRTCuFhCcBzvof7eeCuzC7WwC7AWaQZ4J3MDgxX19Qidzdy/gZsIYS9kua7Ae6byPkzsJkQ9kuaG0AaATmfwP0x8FZmBwexnWu2Ktn9gWI83QlI6QVwGGlaIdwvA7jvIecPwBIhbJO00HgX7jvI+RPwgxAmJdXfYMV6D8VTegUcAq7I7FbL4V3/td3XcJ9VjGeGY/oBOR/H/WnRy3CfUoxv/gzgHkhpHml3D+SZzI6NxvQqKKq8I6gI4FV1Ceky7rcV4501N9HhKxryym9KqX5+k8BXmW0fObpWXzmgqmaQ6kN6ohjPjSho9RUDxplD0Qz+a8BPRxzKGeZ9QbQAAAAASUVORK5CYII="/>
+                Agregar
+            </button>
     </div>
 
     <div class="ProductoDestacado ProductoDestacado2 card mb-3">
         <img src="./img/mesaratonera.jpg" class="ImgDestacados" title="Mesa ratonera" alt="Imagen de mesa ratonera">
             <h3>Mesa ratonera</h3>
             <p>Precio: $</p>
-            <button>Agregar al carrito</button>
+            <button class="btnproductos"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcBJREFUSEvNlD+Iz3EYx1/v7vN8BgODcmKQUgajgdsMjBalDErJsSgkGRklkkxXLsVAFouNsgnDTaYzUkiWq1P3/Xy6h+/ld/3ud98/H/2cPOvz9Lye9/NPbLBpg/Pz7wCekv9WswjMyuzC31C3qmAIMMh7RGYvx4Wsa5GndBW4ATyX2dEmwKAYmfW2eD3AfSs5fwEmCGGXpI+jkLEAdTKvqkdIJ4GbMqsVrbHxASlNAa+B74SwU9KSp7QMrVu3LLOJpna29tCr6j3SPqRTCuFhCcBzvof7eeCuzC7WwC7AWaQZ4J3MDgxX19Qidzdy/gZsIYS9kua7Ae6byPkzsJkQ9kuaG0AaATmfwP0x8FZmBwexnWu2Ktn9gWI83QlI6QVwGGlaIdwvA7jvIecPwBIhbJO00HgX7jvI+RPwgxAmJdXfYMV6D8VTegUcAq7I7FbL4V3/td3XcJ9VjGeGY/oBOR/H/WnRy3CfUoxv/gzgHkhpHml3D+SZzI6NxvQqKKq8I6gI4FV1Ceky7rcV4501N9HhKxryym9KqX5+k8BXmW0fObpWXzmgqmaQ6kN6ohjPjSho9RUDxplD0Qz+a8BPRxzKGeZ9QbQAAAAASUVORK5CYII="/>
+                Agregar
+            </button>
     </div>
     
     <div class="ProductoDestacado ProductoDestacado2 card mb-3">
         <img src="./img/rack.jpg" class="ImgDestacados" title="Rack para TV" alt="Imagen de rack para tv">
             <h3>Rack para TV</h3>
             <p>Precio: $</p>
-            <button>Agregar al carrito</button>
+            <button class="btnproductos"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcBJREFUSEvNlD+Iz3EYx1/v7vN8BgODcmKQUgajgdsMjBalDErJsSgkGRklkkxXLsVAFouNsgnDTaYzUkiWq1P3/Xy6h+/ld/3ud98/H/2cPOvz9Lye9/NPbLBpg/Pz7wCekv9WswjMyuzC31C3qmAIMMh7RGYvx4Wsa5GndBW4ATyX2dEmwKAYmfW2eD3AfSs5fwEmCGGXpI+jkLEAdTKvqkdIJ4GbMqsVrbHxASlNAa+B74SwU9KSp7QMrVu3LLOJpna29tCr6j3SPqRTCuFhCcBzvof7eeCuzC7WwC7AWaQZ4J3MDgxX19Qidzdy/gZsIYS9kua7Ae6byPkzsJkQ9kuaG0AaATmfwP0x8FZmBwexnWu2Ktn9gWI83QlI6QVwGGlaIdwvA7jvIecPwBIhbJO00HgX7jvI+RPwgxAmJdXfYMV6D8VTegUcAq7I7FbL4V3/td3XcJ9VjGeGY/oBOR/H/WnRy3CfUoxv/gzgHkhpHml3D+SZzI6NxvQqKKq8I6gI4FV1Ceky7rcV4501N9HhKxryym9KqX5+k8BXmW0fObpWXzmgqmaQ6kN6ohjPjSho9RUDxplD0Qz+a8BPRxzKGeZ9QbQAAAAASUVORK5CYII="/>
+                Agregar
+            </button>
     </div>
     
 </div>

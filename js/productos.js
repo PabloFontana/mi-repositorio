@@ -11,7 +11,7 @@ const inputSearch = document.querySelector('#inputSearch')
 const SeleccionCategoria = document.querySelector('#SeleccionCategoria')
 //No puedo hacer el local storage me devuelva el carrito que si queda guardado. no encuentro el error para saber porque no queda cargado al actualizar..
 const listaDelCarrito = JSON.parse( localStorage.getItem('carro') ) || [];
-const carrito = new carro(listaDelCarrito);
+const carrito = new carro(listaDelCarrito); 
 
 let lista_Productos = [] ;
 
